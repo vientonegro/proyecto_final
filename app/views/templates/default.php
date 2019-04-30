@@ -11,13 +11,15 @@
         <link rel="stylesheet" type="text/css" href="webroot/css/home.css">
         <script type="text/javascript" src="webroot/js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="webroot/js/home.js"></script>
+        <script type="text/javascript" src="webroot/js/contacto.js"></script>
+        <link rel="stylesheet" type="text/css" href="webroot/css/contacto.css">   
     </head>
     <body>
         <header onload="cambiarImagenes()">
             <nav id="priMenu" id="arri">
                 <ul>
                     <li><img src="<?php echo BASE_DOMAIN_DIR_IMG?>pint2.png" id="logo"></li>
-                    <li><a href="../formulario/contacto.html">Contacto</a></li>
+                    <li><a href="contacto/index">Contacto</a></li>
                     <li><a href="#sec3">Registro</a></li>
                     <li><a href="#sec3">Inicio</a></li>
                     <li><img src="<?php echo BASE_DOMAIN_DIR_IMG?>carro2.png" id="carro"></li>

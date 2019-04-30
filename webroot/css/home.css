@@ -138,7 +138,7 @@ header>div.header_cab
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	height: 100vh;
+	height: 30vh;
 }
 header>div.header_cab>h1
 {
@@ -148,7 +148,7 @@ header>div.header_cab>h1
 	vertical-align: middle;
 	position: absolute;
 	width: 100%;
-	top: 42%;
+	top: 29%;
 	transform: translateY(-50%);
 }
   /*segundo menu*/
