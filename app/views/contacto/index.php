@@ -13,7 +13,7 @@
       <!-- <li><label>Movil:</label></li> -->
       <li><input id="movil" name="movil" type="number" placeholder="Movil" onkeyup="validarMovil(event)"><div id="caja4"></li>
       <!-- <li><label>Mensaje:</label></li> -->
-      <li><textarea rows="4" cols="50" placeholder="Introduce el mensaje"></textarea></li>  
+      <li><textarea rows="4" cols="50" placeholder="Introduce el mensaje"></textarea><div id="caja4"></li>  
       <input type="submit" value="Enviar" onclick="validar_todo(event)">
       <li><span id="mensaje"></span></li>
     </ul>

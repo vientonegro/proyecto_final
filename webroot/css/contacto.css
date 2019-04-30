@@ -1,7 +1,11 @@
 
 .contacto
 {
-	background-image: url(/proyecto_final/webroot/img/cont1.jpg);
+	background-image: url(/proyecto_final/webroot/img/pizzarra.jpg);
+	background-size: cover;
+	/*background-position: center;*/
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 
 }
 form
@@ -13,6 +17,12 @@ form
 	font-family: arial;
 	text-align: center;
 	background: white;
+
+}
+form:hover
+{
+
+box-shadow: 2px 2px 10px black;
 
 }
 
