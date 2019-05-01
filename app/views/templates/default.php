@@ -9,6 +9,7 @@
         <base href="<?php echo BASE_DOMAIN_DIR_URL?>">
         <link href="https://fonts.googleapis.com/css?family=Arizonia" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="webroot/css/home.css">
+        <link rel="stylesheet" type="text/css" href="webroot/css/slider3d.css">   
         <script type="text/javascript" src="webroot/js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="webroot/js/home.js"></script>
         <script type="text/javascript" src="webroot/js/contacto.js"></script>

@@ -8,7 +8,21 @@
                         <h2>Los mejores Regalos</h2>
                     </div>
                     <div>
-                        <img name="slider">
+                        <section id="slideshow">
+                                <div class="entire-content">
+                                    <div class="content-carrousel">
+                                        <figure class="shadow"><img src="<?php echo BASE_DOMAIN_DIR_IMG?>1.jpg"/></figure>
+                                        <figure class="shadow"><img src="<?php echo BASE_DOMAIN_DIR_IMG?>3.jpg"/></figure>
+                                        <figure class="shadow"><img src="<?php echo BASE_DOMAIN_DIR_IMG?>9.jpg"/></figure>
+                                        <figure class="shadow"><img src="<?php echo BASE_DOMAIN_DIR_IMG?>12.jpg"/></figure>
+                                        <figure class="shadow"><img src="<?php echo BASE_DOMAIN_DIR_IMG?>13.jpg"/></figure>
+                                        <figure class="shadow"><img src="<?php echo BASE_DOMAIN_DIR_IMG?>15.jpg"/></figure>
+                                        <figure class="shadow"><img src="<?php echo BASE_DOMAIN_DIR_IMG?>16.jpg"/></figure>
+                                        <figure class="shadow"><img src="<?php echo BASE_DOMAIN_DIR_IMG?>17.jpg"/></figure>
+                                        <figure class="shadow"><img src="<?php echo BASE_DOMAIN_DIR_IMG?>10.jpg"/></figure>
+                                    </div>
+                                </div>
+                        </section>
                     </div>
                 </section>
                     <section class="cajaMediana">
