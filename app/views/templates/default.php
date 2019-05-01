@@ -31,6 +31,38 @@
             <div class="header_cab">
                 <h1>Creation Art</h1>
             </div>
+            <div class="sliderr">  
+              <ul> 
+                 <li>
+                   <div class="title"><a href="#"></a></div>
+                   <img src="<?php echo BASE_DOMAIN_DIR_IMG?>3.jpg" />           
+                </li>    
+                <li>
+                  <div class="title"><a href="#"></a></div>
+                  <img src="<?php echo BASE_DOMAIN_DIR_IMG?>joyeria.jpg" /> 
+                </li>
+                 <li>
+                  <div class="title"><a href="#"></a></div>
+                   <img src="<?php echo BASE_DOMAIN_DIR_IMG?>artesania.jpg" /> 
+                </li>
+                 <li>
+                   <div class="title"><a href="#"></a></div>
+                   <img src="<?php echo BASE_DOMAIN_DIR_IMG?>pintura.jpg" />           
+                </li>
+                 <li>
+                   <div class="title"><a href="#"></a></div>
+                   <img src="<?php echo BASE_DOMAIN_DIR_IMG?>13.jpg" />           
+                </li>
+                 <li>
+                   <div class="title"><a href="#"></a></div>
+                   <img src="<?php echo BASE_DOMAIN_DIR_IMG?>1.jpg" />           
+                </li>    
+                 <li>
+                   <div class="title"><a href="#"></a></div>
+                   <img src="<?php echo BASE_DOMAIN_DIR_IMG?>joyeria2.jpg" />           
+                </li>
+              </ul>
+            </div> 
         </header>
         <nav id="segMenu">
             <ul>
