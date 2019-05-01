@@ -54,6 +54,7 @@
                             <h3 class="prod">Producto</h3>
                         </article>
                     </section>
+                    <div style="clear: both;"></div>
                     <aside id="entrada">
                         <h3 class="post">Te puede interesar</h3>
                         <ul class="reci">
@@ -88,7 +89,7 @@
                         </ul>               
                     </aside>                    
             </div>  
-            <div class="limpiar"></div>
+            <div style="clear: both;"></div>
                 
         </main>
 		
