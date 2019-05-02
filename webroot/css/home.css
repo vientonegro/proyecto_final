@@ -266,7 +266,7 @@ main>div.cajaGrande>section.slider>div>img:hover
 main>div.cajaGrande>section.cajaMediana
 {
 	width: 95%;
-	padding-left: 88px;
+	/*padding-left: 88px;*/
 	
 
 }
@@ -274,9 +274,8 @@ main>div.cajaGrande>section.cajaMediana>div.titulillo>h2
 {	
 
 	margin-top: 23px;
+	margin-left: 34%;
 	margin-bottom: 75px;
-	transform: translateX(69%);
-	padding: 20px 0;
 	width: 40%;
 	text-align: center;
 	font-size: 81px;
@@ -285,12 +284,12 @@ main>div.cajaGrande>section.cajaMediana>div.titulillo>h2
 }
 main>div>section>article.cajaPeque
 {
-	width: 500px;
-	height: 450px;
+	width: 400px;
+	height: 350px;
 	text-align: center; 
 	background: white; 
 	float: left; 
-	margin: 0 2% 2% 2%; 
+    margin: 0px 2% 2% 9%; 
 	border-radius: 3px; 
 	box-shadow: 1px 1px 15px black;
 	transition: all 300ms;
@@ -325,7 +324,8 @@ main>div>aside#entrada
 	width: 20%; 
 	background-color: rgba(255,255,255,.7);
 	border-radius: 5px;	
-	margin-left: 119px;
+	margin-left: 9%;
+
 }
 main>div>aside#entrada:hover
 {
@@ -348,7 +348,7 @@ aside>ul>li.letras
 {
 	
 	padding-bottom: 10px; 
-	margin-bottom: 15px;
+	/*margin-bottom: 15px;*/
 	margin-left: 10px;
 }
 aside>ul>li>img.foto
@@ -385,54 +385,17 @@ footer
 
  
 }
-footer>div
-{
-   width: 100%;
-   height:100px;
-   background:black;
 
-}
-footer>div>ul
-{
-	display: flex;
-	justify-content: center;
-	list-style-type: none;
-	margin: 0;
-}
+footer>h3 
+{	
 
-footer>div>ul>li>img#logo2 
-{	
-    height: auto;
-    width: 86px;
-  	transform: translate(-900%, 55%);
-	   	
-} 
-footer>div>ul>li>h3 
-{	
- 	padding: 25px 17px;
-	display: inline-block;
 	color: white;
 	font-size: 30px;
-	transform: translate(190%, 20%); 
 
 
 }
 
-footer>div>ul>li>h2#arriba 
-{	
-  font-size: 50px;
-  color: white; 
-  transform: translate(115%, 52%);
-  cursor: pointer;
-  border-radius: 3px;
-  font-family: lustria;	
-}
-footer>div>ul>li>h2#arriba:hover 
-{	
- 	background-color: white;
-	color: black;
-	box-shadow: 2px 2px 10px black;
-}
+
 
    /*Responsive------------------------------*/
 
@@ -442,10 +405,21 @@ header
 {
 	width: 100%;
 }
+
 header>nav#priMenu
 {
 	width: 100%;
 }
+header>div.header_cab>h1
+{	
+
+	text-align: center;
+	font-size: 100px;
+
+	top: 41%;
+
+}
+
 
 main>div.cajaGrande
 {
@@ -465,7 +439,7 @@ main>div.cajaGrande>section.cajaMediana>div.titulillo>h2
 	
 	width: 100%;
 	text-align: center;
-	margin-left: -80%;
+	margin-left: 0%;
 	
 }
 
@@ -477,45 +451,28 @@ main>div.cajaGrande>section.cajaMediana
 	text-align: center;
 	
 }
+main>div>section>article.cajaPeque
+{
+
+    margin: 0px 2% 2% 30%; 
+
+}
 
 main>div>aside#entrada
 {
-	width: 90%;
+	width: 30%;
 	float: none;
 	clear: both;
-	transform: translateX(0);	
+	margin-left: 35%;
+	
 }
 
 footer
 {
 	width: 100%;	
 }
-footer>div>ul
-{
-	width: 100%;
 }
 
-footer>div>ul>li>img#logo2 
-{	
-    height: auto;
-    width: 50px;
-    transform: translate(-395px, 128%);
-	   	
-} 
-
-footer>div>ul>li>h2#arriba 
-{	
-  font-size: 30px;
-  transform: translate(151%, 106%);
-  cursor: pointer;
-  border-radius: 3px;	
-}
-footer>div>ul>li>h3 
-{	
-	font-size: 18px;
-    transform: translate(147%, 20%);
-}
-} 
 /*-------------mi query  */
 
 @media all and (max-width: 768px){
@@ -524,6 +481,15 @@ header
 {
 	width: 100%;
 }
+header>div.header_cab>h1
+{	
+
+	text-align: center;
+	font-size: 100px;
+
+	top: 42%;
+
+}
 
 main>div.cajaGrande
 {
@@ -543,7 +509,7 @@ main>div.cajaGrande>section.cajaMediana>div.titulillo>h2
 	
 	width: 100%;
 	text-align: center;
-	margin-left: -80%;
+	margin-left: 2%;
 	
 }
 
@@ -555,13 +521,23 @@ main>div.cajaGrande>section.cajaMediana
 	text-align: center;
 	
 }
+main>div>section>article.cajaPeque
+{
+
+    margin: 0px 2% 2% 24%; 
+
+}
 
 main>div>aside#entrada
 {
-	width: 90%;
+	width: 44%;
+
 	float: none;
+
 	clear: both;
-	transform: translateX(0);	
+
+	margin-left: 28%;
+	
 }
 div#notapa
 {
@@ -572,33 +548,6 @@ footer
 {
 	width: 100%;	
 }
-footer>div>ul
-{
-	width: 100%;
-}
 
-footer>div>ul>li>img#logo2 
-{	
-    height: auto;
-    width: 50px;
-    transform: translate(-260px, 128%);
-	   	
-} 
-
-footer>div>ul>li>h2#arriba 
-{	
-  font-size: 30px;
-  transform: translate(151%, 106%);
-  cursor: pointer;
-  border-radius: 3px;	
-}
-footer>div>ul>li>h3 
-{	
- 	padding-top: 28px;
- 	padding-left: 19px;
-	font-size: 18px;
-    transform: translate(89%, 20%);
-
-}
 
 }   

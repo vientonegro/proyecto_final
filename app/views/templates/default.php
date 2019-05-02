@@ -75,14 +75,9 @@
         <main>
                  <?php echo $content_for_layout;?> 
         </main>
+        <div class="limpiar"></div>
         <footer>
-            <div>
-                <ul>
-                    <li><h2 id="arriba" ><a href="#arri"></a>Arriba</h2></li>
-                    <li><img src="<?php echo BASE_DOMAIN_DIR_IMG?>pint2.png" id="logo2"></li>
-                    <li><h3> © 2019 Creation Art, Inc.</h3></li>
-                </ul>
-            </div>
+                <h3>© 2019 Creation Art, Inc.</h3>
         </footer>
     </body>
 </html>
