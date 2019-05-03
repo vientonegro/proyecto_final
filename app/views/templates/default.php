@@ -77,7 +77,7 @@
         </main>
         <div class="limpiar"></div>
         <footer>
-                <h3>© 2019 Creation Art, Inc.</h3>
+                <h3 class="pie">© 2019 Creation Art, Inc.</h3>
         </footer>
     </body>
 </html>

@@ -65,12 +65,6 @@
                         </ul>
                         <ul class="reci">
                             <li class="letras">
-                                <img class="foto" src="<?php echo BASE_DOMAIN_DIR_IMG?>b.jpg">
-                                <span>Que regalar</span>
-                            </li>
-                        </ul>
-                        <ul class="reci">
-                            <li class="letras">
                                 <img class="foto" src="<?php echo BASE_DOMAIN_DIR_IMG?>f.jpg">
                                 <span>Reseñas</span>
                             </li>
@@ -87,10 +81,9 @@
                                 <span>Facebook</span>
                             </li>
                         </ul>               
-                    </aside>                    
+                    </aside>                 
             </div>  
-            <div style="clear: both;"></div>
-                
+            <div style="clear: both;"></div> 
         </main>
 		
 

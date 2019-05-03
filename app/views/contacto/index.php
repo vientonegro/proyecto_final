@@ -5,7 +5,7 @@
 <body class="contacto">
     <form id="contacto" method="post" action="contacto.php">
      <ul>
-      <li><h3>Contacto</h3></li>
+      <li><h3 class="contacto">Contacto</h3></li>
       <!-- <li><label>Nombre:</label></li> -->
       <li><input id="nombre" name="nombre" type="text" placeholder="Nombre" onkeyup="validarNombre(event)"><div id="caja1"></li>
       <!-- <li><label>Apellido:</label></li> -->
