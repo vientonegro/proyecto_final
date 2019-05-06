@@ -232,11 +232,12 @@ nav#segMenu>ul>li>a:hover
 main
 {
 	width: 100%;
-	background-color: rgba(255,255,255,.3);
+	
 }
 main>div.cajaGrande
 {
 	width: 100%;
+	background-color: rgba(255,255,255,.4) ;
 	
 }
 main>div.cajaGrande>section.slider

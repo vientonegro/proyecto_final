@@ -66,10 +66,10 @@
         </header>
         <nav id="segMenu">
             <ul>
-                <li><a href="#sec1">Home</a></li>
-                <li><a href="#sec2">Joyeria</a></li>
-                <li><a href="#sec3">Artesania</a></li>
-                <li><a href="#sec1">Pintura</a></li>
+                <li><a href="home/index">Home</a></li>
+                <li><a href="categorias/index">Joyeria</a></li>
+                <li><a href="categorias/index">Artesania</a></li>
+                <li><a href="categorias/index">Pintura</a></li>
             </ul>
         </nav>
         <main>

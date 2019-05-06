@@ -2,7 +2,7 @@
 
 
 
-<body class="contacto">
+<div class="contacto">
     <form id="contacto" method="post" action="contacto.php">
      <ul>
       <li><h3 class="contacto">Contacto</h3></li>
@@ -18,5 +18,4 @@
       <li><span id="mensaje"></span></li>
     </ul>
   </form>
-
-</body>
+</div>
