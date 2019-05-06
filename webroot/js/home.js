@@ -20,30 +20,43 @@
     	}
 	}
 
-   // Slider
+var pos_actual = 4;
 
-	// window.addEventListener('load', function(){
-	// 	console.log('el contenido ha cargado!');
+$(document).ready(function(){
 
-	// 	var imagenes = [];
+	$("span.more").on("click", function(){
+		get_recent();
+	});
 
-	// 	imagenes[0] = '/proyecto_final/webroot/img/1.jpg';
-	// 	imagenes[1] = '/proyecto_final/webroot/img/9.jpg';
-	// 	imagenes[2] = '/proyecto_final/webroot/img/hea.jpg';
+});
 
-	// 	var indiceImagenes = 0;
+function get_recent()
+{
+	$.ajax({
+		type: "post",
+		dataType: "json",
+		url: url+"home/recent",
+		data: "pos="+pos_actual,
+		beforeSend: function(){
+			$(".loading>img").show();
+			$(".more").hide();
+		},
+		success: function(data){
+			pos_actual+=4;
+			if(data.length>0)
+			{
+				$(".content").append(data);
+				$(".more").show();
+			}
+			else
+			{
+				$("p.nomore").html("No hay más resultados");
+			}
+			
+			$(".loading>img").hide();
+		},
+		error: function(e){
 
-	// 	function cambiarImagenes(){
-
-	// 		document.slider.src = imagenes[indiceImagenes];
-
-	// 		if(indiceImagenes < 2){
-	// 			indiceImagenes++;
-	// 		}else{
-	// 			indiceImagenes = 0;
-	// 		}
-	// 	}
-
-	// 	setInterval(cambiarImagenes, 3000);
-
-	// });
+		}
+	});
+}
