@@ -2,7 +2,7 @@
 		
 
 
-		<form method="post" id="registro" action="home/registro">
+		<form method="post" id="registro" action="registro/registro">
 			<h3>REGISTRO</h3>
 			<input type="text" name="usuarioR" id="usuarioR" placeholder="usuario">
 			<input type="password" name="contraR" id="contraR" placeholder="contraseña">

@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') or exit ('No se permite acceso directo');?>
 
 
-		<form method="post" action="home/login" id="login">
+		<form method="post" action="login/login" id="login">
 			<h3>LOGIN</h3>
 			<input type="text" name="usuarioL" id="usuarioL" placeholder="usuario">
 			<input type="password" name="contraL" id="contraL" placeholder="contraseña">

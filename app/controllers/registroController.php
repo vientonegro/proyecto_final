@@ -3,7 +3,8 @@
 class registroController extends Controller 
 {
 
-    public function index() {
+    public function index() 
+    {
 
         $this->render('index');
 
@@ -17,7 +18,7 @@ class registroController extends Controller
 			$regUsu = Security::secure_input($_POST["usuarioR"]);
 			$regCon = Security::secure_input($_POST["contraR"]);
 
-			require_once(ROOT . DS .'app' .DS . 'models' . DS . 'homeModel.php');
+			require_once(ROOT . DS .'app' .DS . 'models' . DS . 'registroModel.php');
       
 			$insertar = new registro();
 

@@ -105,13 +105,13 @@ console.log("Registrar");
 		}
 
   		$("#errorsR").html(msg);
-console.log(msg);
+
   		if(msg == ""){
   			
   			$.ajax({
 
   				type: 'post',
-  				url: 'home/registro',
+  				url: 'registro/registro',
   				data: $("#registro").serialize(),
   				dataType: 'json',
 
@@ -159,9 +159,9 @@ console.log(msg);
   		if(msg == ""){
 
   			$.ajax({
-
+  					// cambiar url
   				type: 'post',
-  				url: '/m2/home/login',
+  				url: 'login/login',
   				data: $("#login").serialize(),
   				dataType: 'json',
 
