@@ -21,8 +21,8 @@
                 <ul>
                     <li><img src="<?php echo BASE_DOMAIN_DIR_IMG?>pint2.png" id="logo"></li>
                     <li><a href="contacto/index">Contacto</a></li>
-                    <li><a href="#sec3">Registro</a></li>
-                    <li><a href="#sec3">Inicio</a></li>
+                    <li><a href="registro/index">Registro</a></li>
+                    <li><a href="login/index">Inicio</a></li>
                     <li><img src="<?php echo BASE_DOMAIN_DIR_IMG?>carro2.png" id="carro"></li>
                     <li><img id="lupa" src="<?php echo BASE_DOMAIN_DIR_IMG?>lupa.png" onclick="buscar()"></li>
                     <li><input type="text" id="buscar" placeholder="Buscar ..." onblur="hide_input()" onkeyup="valida(event)"></li>

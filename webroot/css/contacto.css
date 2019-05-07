@@ -34,5 +34,11 @@ h3.contacto
 	padding-top: 20px;
 	padding-bottom: 30px;
 }
-
+.error-validation{
+	border: 1px solid red;
+}
+#errorsR, #errorsL{
+	text-align: center;
+	color: red;
+}
 
