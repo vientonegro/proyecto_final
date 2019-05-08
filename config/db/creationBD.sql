@@ -21,15 +21,14 @@ USE `CreationModel` ;
 DROP TABLE IF EXISTS `CreationModel`.`usuarios` ;
 
 CREATE TABLE IF NOT EXISTS `CreationModel`.`usuarios` (
-  `idUsuarios` INT NULL AUTO_INCREMENT,
-  `nick` VARCHAR(45) NULL,
+  `usuario` VARCHAR(45) NULL,
   `email` VARCHAR(100) NULL,
   `password` VARCHAR(45) NULL,
   `nombre` VARCHAR(45) NULL,
   `apellidos` VARCHAR(45) NULL,
   `movil` INT NULL,
-  PRIMARY KEY (`idUsuarios`),
-  UNIQUE INDEX `nick_UNIQUE` (`nick` ASC))
+  PRIMARY KEY (`usuario`),
+  UNIQUE INDEX `nick_UNIQUE` (`usuario` ASC))
 ENGINE = InnoDB;
 
 
@@ -62,8 +61,8 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `CreationModel`;
-INSERT INTO `CreationModel`.`usuarios` (`idUsuarios`, `nick`, `email`, `password`, `nombre`, `apellidos`, `movil`) VALUES (null, 'capi', 'capi@capi.com', '1234', 'luis', 'rock', 623456789);
-INSERT INTO `CreationModel`.`usuarios` (`idUsuarios`, `nick`, `email`, `password`, `nombre`, `apellidos`, `movil`) VALUES (NULL, 'hulk', 'hulk@hulk.com', '4321', 'dayana', 'rice', 987654321);
+INSERT INTO `CreationModel`.`usuarios` (`usuario`, `email`, `password`, `nombre`, `apellidos`, `movil`) VALUES (null, 'capi', 'capi@capi.com', '1234', 'luis', 'rock', 623456789);
+INSERT INTO `CreationModel`.`usuarios` (`usuario`, `email`, `password`, `nombre`, `apellidos`, `movil`) VALUES (NULL, 'hulk', 'hulk@hulk.com', '4321', 'dayana', 'rice', 987654321);
 
 COMMIT;
 

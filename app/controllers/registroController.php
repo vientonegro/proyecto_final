@@ -9,10 +9,7 @@ class registroController extends Controller
         $this->render('index');
 
     }
-    
-
-
-    
+   
     public function registro()
 	{
 
