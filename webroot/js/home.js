@@ -83,6 +83,7 @@ $(document).ready(function(){
 		$("input[type=password]").val("");
 		$("#usuarioR").removeClass("error-validation");
 		$("#contraR").removeClass("error-validation");
+		$("#emailR").removeClass("error-validation");	
 		$("#login").css("display","none");
 		$("#registro").css("display","block");
 	});
@@ -102,6 +103,12 @@ console.log("Registrar");
 			$("#contraR").addClass("error-validation");
 		} else {
 			$("#contraR").removeClass("error-validation");
+		}
+		if($("#emailR").val() == ""){
+			msg += "El campo contraseña está vacío <br>";
+			$("#emailR").addClass("error-validation");
+		} else {
+			$("#emailR").removeClass("error-validation");
 		}
 
   		$("#errorsR").html(msg);
@@ -138,10 +145,6 @@ console.log("Registrar");
 
   		}
 	});
-
-	$("#borrar").click(function(){
-		$("#registro")[0].reset();
-	});	
 
 
 	$("#loginB").click(function(){
@@ -193,7 +196,4 @@ console.log("Registrar");
   		}
 	});
 
-	$("#borrar").click(function(){
-		$("#registro")[0].reset();
-	});	
 });

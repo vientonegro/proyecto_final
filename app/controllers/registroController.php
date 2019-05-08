@@ -10,20 +10,21 @@ class registroController extends Controller
 
     }
    
-    public function registro()
+    public function usuario()
 	{
 
-		if(isset($_POST["usuarioR"]) && isset($_POST["contraR"]))
+		if(isset($_POST["usuarioR"]) && isset($_POST["emailR"]) && isset($_POST["contraR"]))
 		{
 
 			$regUsu = Security::secure_input($_POST["usuarioR"]);
+			$regEm = Security::secure_input($_POST["emailR"]);
 			$regCon = Security::secure_input($_POST["contraR"]);
 
-			require_once(ROOT . DS .'app' .DS . 'models' . DS . 'registroModel.php');
+			require_once(ROOT . DS .'app' .DS . 'models' . DS . 'usuarioModel.php');
       
-			$insertar = new registro();
+			$insertar = new usuario();
 
-			$d= $insertar->insertRegistro($regUsu,$regCon);
+			$d= $insertar->insertRegistro($regUsu,$regEm,$regCon);
 
 
 			echo json_encode($d);

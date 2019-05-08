@@ -7,7 +7,7 @@ class loginController extends Controller {
         $this->render('index');
 
     }
-    public function login()
+    public function usuario()
 	{
 		if(isset($_POST["usuarioL"]) && isset($_POST["contraL"]))
 		{
@@ -15,9 +15,9 @@ class loginController extends Controller {
 			$logUsu = Security::secure_input($_POST["usuarioL"]);
 			$logCon = Security::secure_input($_POST["contraL"]);
 
-			require_once(ROOT . DS .'app' .DS . 'models' . DS . 'loginModel.php');
+			require_once(ROOT . DS .'app' .DS . 'models' . DS . 'usuarioModel.php');
 
-			$insertar = new login();
+			$insertar = new usuario();
 			$d= $insertar->get_log($logUsu,$logCon);
 			echo json_encode($d);
 					
@@ -33,7 +33,7 @@ class loginController extends Controller {
 	public function salir()
 	{
 	session_start();
-	unset($_SESSION["user_data"]);	
+	unset($_SESSION["usuario"]);	
 	session_destroy();
 	header('Location: ' . BASE_DOMAIN_DIR_URL . 'home/index');
 	}
