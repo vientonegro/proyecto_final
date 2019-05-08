@@ -20,13 +20,22 @@ class loginController extends Controller {
 			$insertar = new login();
 			$d= $insertar->get_log($logUsu,$logCon);
 			echo json_encode($d);
+					
 		}
 		else
 		{
 			//Si quiere entrar directo sin POST salta el 404
+			echo json_encode("Error");
 
-			header('Location: ' . BASE_DOMAIN_DIR_URL . 'webroot/404.php');
+			//header('Location: ' . BASE_DOMAIN_DIR_URL . 'webroot/404.php');
 		}
+	}
+	public function salir()
+	{
+	session_start();
+	unset($_SESSION["user_data"]);	
+	session_destroy();
+	header('Location: ' . BASE_DOMAIN_DIR_URL . 'home/index');
 	}
 
 }

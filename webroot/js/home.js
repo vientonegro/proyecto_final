@@ -121,6 +121,13 @@ console.log("Registrar");
 
   				success: function(data){
   					$("#errorsR").html(data);
+
+  					//No esta redireccionando mirar
+  					if(data == "Registro correcto")
+  					{
+  						setTimeout(function(){ location.href="home/index" }, 0);
+
+  					}
   				},
 
   				error: function(){
@@ -171,6 +178,11 @@ console.log("Registrar");
 
   				success: function(data){
   					$("#errorsL").html(data);
+  					if(data == "Login correcto")
+  					{
+  						setTimeout(function(){ location.href="home/index" }, 0);
+  					}
+  					
   				},
 
   				error: function(){

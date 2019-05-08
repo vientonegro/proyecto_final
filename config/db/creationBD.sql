@@ -18,9 +18,9 @@ USE `CreationModel` ;
 -- -----------------------------------------------------
 -- Table `CreationModel`.`usuarioVende`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `CreationModel`.`usuarioVende` ;
+DROP TABLE IF EXISTS `CreationModel`.`usuarios` ;
 
-CREATE TABLE IF NOT EXISTS `CreationModel`.`usuarioVende` (
+CREATE TABLE IF NOT EXISTS `CreationModel`.`usuarios` (
   `idUsuarios` INT NULL AUTO_INCREMENT,
   `nick` VARCHAR(45) NULL,
   `email` VARCHAR(100) NULL,
@@ -28,11 +28,6 @@ CREATE TABLE IF NOT EXISTS `CreationModel`.`usuarioVende` (
   `nombre` VARCHAR(45) NULL,
   `apellidos` VARCHAR(45) NULL,
   `movil` INT NULL,
-  `ciudad` VARCHAR(45) NULL,
-  `calle` VARCHAR(45) NULL,
-  `piso` INT NULL,
-  `puerta` INT NULL,
-  `codigoPostal` INT NULL,
   PRIMARY KEY (`idUsuarios`),
   UNIQUE INDEX `nick_UNIQUE` (`nick` ASC))
 ENGINE = InnoDB;
@@ -45,14 +40,14 @@ DROP TABLE IF EXISTS `CreationModel`.`productos` ;
 
 CREATE TABLE IF NOT EXISTS `CreationModel`.`productos` (
   `idProducto` INT NULL AUTO_INCREMENT,
-  `categoria` VARCHAR(100) NULL,
+  `categoria` INT NULL,
   `precio` FLOAT NULL,
   `idUsuarios` INT NOT NULL,
   PRIMARY KEY (`idProducto`),
   INDEX `fk_productos_usuarios_idx` (`idUsuarios` ASC),
   CONSTRAINT `fkProductos`
     FOREIGN KEY (`idUsuarios`)
-    REFERENCES `CreationModel`.`usuarioVende` (`idUsuarios`)
+    REFERENCES `CreationModel`.`usuarios` (`idUsuarios`)
     ON DELETE RESTRICT
     ON UPDATE CASCADE)
 ENGINE = InnoDB;
@@ -67,8 +62,8 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `CreationModel`;
-INSERT INTO `CreationModel`.`usuarioVende` (`idUsuarios`, `nick`, `email`, `password`, `nombre`, `apellidos`, `movil`, `ciudad`, `calle`, `piso`, `puerta`, `codigoPostal`) VALUES (null, 'capi', 'capi@capi.com', '1234', 'luis', 'rock', 623456789, 'barcelona', 'balmes', 1, 2, 08980);
-INSERT INTO `CreationModel`.`usuarioVende` (`idUsuarios`, `nick`, `email`, `password`, `nombre`, `apellidos`, `movil`, `ciudad`, `calle`, `piso`, `puerta`, `codigoPostal`) VALUES (NULL, 'hulk', 'hulk@hulk.com', '4321', 'dayana', 'rice', 987654321, 'madrid', 'sala', 3, 4, 07896);
+INSERT INTO `CreationModel`.`usuarios` (`idUsuarios`, `nick`, `email`, `password`, `nombre`, `apellidos`, `movil`) VALUES (null, 'capi', 'capi@capi.com', '1234', 'luis', 'rock', 623456789);
+INSERT INTO `CreationModel`.`usuarios` (`idUsuarios`, `nick`, `email`, `password`, `nombre`, `apellidos`, `movil`) VALUES (NULL, 'hulk', 'hulk@hulk.com', '4321', 'dayana', 'rice', 987654321);
 
 COMMIT;
 
@@ -78,11 +73,11 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `CreationModel`;
-INSERT INTO `CreationModel`.`productos` (`idProducto`, `categoria`, `precio`, `idUsuarios`) VALUES (NULL, 'joyeria', 50, 1);
-INSERT INTO `CreationModel`.`productos` (`idProducto`, `categoria`, `precio`, `idUsuarios`) VALUES (NULL, 'pintura', 700, 2);
-INSERT INTO `CreationModel`.`productos` (`idProducto`, `categoria`, `precio`, `idUsuarios`) VALUES (NULL, 'artesania', 200, 2);
-INSERT INTO `CreationModel`.`productos` (`idProducto`, `categoria`, `precio`, `idUsuarios`) VALUES (NULL, 'joyeria', 2000, 1);
-INSERT INTO `CreationModel`.`productos` (`idProducto`, `categoria`, `precio`, `idUsuarios`) VALUES (NULL, 'pintura', 50000, 1);
+INSERT INTO `CreationModel`.`productos` (`idProducto`, `categoria`, `precio`, `idUsuarios`) VALUES (NULL, 1, 50, 1);
+INSERT INTO `CreationModel`.`productos` (`idProducto`, `categoria`, `precio`, `idUsuarios`) VALUES (NULL, 3, 700, 2);
+INSERT INTO `CreationModel`.`productos` (`idProducto`, `categoria`, `precio`, `idUsuarios`) VALUES (NULL, 2, 200, 2);
+INSERT INTO `CreationModel`.`productos` (`idProducto`, `categoria`, `precio`, `idUsuarios`) VALUES (NULL, 1, 2000, 1);
+INSERT INTO `CreationModel`.`productos` (`idProducto`, `categoria`, `precio`, `idUsuarios`) VALUES (NULL, 3, 50000, 1);
 
 COMMIT;
 

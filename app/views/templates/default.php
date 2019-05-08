@@ -16,18 +16,17 @@
         <link rel="stylesheet" type="text/css" href="webroot/css/contacto.css">   
     </head>
     <body>
-        <header onload="cambiarImagenes()">
-            <nav id="priMenu" id="arri">
-                <ul>
-                    <li><img src="<?php echo BASE_DOMAIN_DIR_IMG?>pint2.png" id="logo"></li>
-                    <li><a href="contacto/index">Contacto</a></li>
-                    <li><a href="registro/index">Registro</a></li>
-                    <li><a href="login/index">Inicio</a></li>
-                    <li><img src="<?php echo BASE_DOMAIN_DIR_IMG?>carro2.png" id="carro"></li>
-                    <li><img id="lupa" src="<?php echo BASE_DOMAIN_DIR_IMG?>lupa.png" onclick="buscar()"></li>
-                    <li><input type="text" id="buscar" placeholder="Buscar ..." onblur="hide_input()" onkeyup="valida(event)"></li>
-                </ul>
-            </nav>
+      <?php
+        if(isset($_SESSION["usuario"]))
+        {
+          require_once 'logHeader.php';
+        }
+
+        else{
+          require_once 'sinLogHeader.php';
+        }
+        ?>
+
             <div class="header_cab">
                 <h1>Creation Art</h1>
             </div>
