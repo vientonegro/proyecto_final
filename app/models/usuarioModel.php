@@ -51,7 +51,7 @@ class usuario extends Model
 
 		}
     }
-	public function get_log($usuario,$email,$password)
+	public function get_log($usuario,$password)
     {
     	
 		$connect = Model::getInstanceDB();
@@ -66,7 +66,7 @@ class usuario extends Model
 		if ($rows > 0)
 		 {
 		
-			$_SESSION['usuario'] = $usuarioL;
+			$_SESSION['usuario'] = $usuario;
 			return 'Login correcto';
 
 		}

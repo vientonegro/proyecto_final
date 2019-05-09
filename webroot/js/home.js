@@ -20,7 +20,7 @@
     	}
 	}
 
-var pos_actual = 4;
+var pos_actual = 9;
 
 $(document).ready(function(){
 
@@ -42,7 +42,7 @@ function get_recent()
 			$(".more").hide();
 		},
 		success: function(data){
-			pos_actual+=4;
+			pos_actual+=9;
 			if(data.length>0)
 			{
 				$(".content").append(data);
@@ -118,7 +118,7 @@ console.log("Registrar");
   			$.ajax({
 
   				type: 'post',
-  				url: 'registro/registro',
+  				url: 'registro/usuario',
   				data: $("#registro").serialize(),
   				dataType: 'json',
 
@@ -171,7 +171,7 @@ console.log("Registrar");
   			$.ajax({
   					// cambiar url
   				type: 'post',
-  				url: 'login/login',
+  				url: 'login/usuario',
   				data: $("#login").serialize(),
   				dataType: 'json',
 

@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Categorias</title>
-</head>
-<body>
-	<h3>Joyeria</h3>
+<?php defined('BASEPATH') or exit ('No se permite acceso directo');?>
 
-</body>
-</html>
+<div class="content">
+	<?php echo $productos;?>
+</div>
+
+<span class="more">Ver más</span>
+<p class="nomore"></p>
