@@ -13,7 +13,8 @@
         <script type="text/javascript" src="webroot/js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="webroot/js/home.js"></script>
         <script type="text/javascript" src="webroot/js/contacto.js"></script>
-        <link rel="stylesheet" type="text/css" href="webroot/css/contacto.css">   
+        <link rel="stylesheet" type="text/css" href="webroot/css/contacto.css">
+        <link rel="stylesheet" type="text/css" href="webroot/css/dinamic.css">   
     </head>
     <body>
       <?php
@@ -66,9 +67,9 @@
         <nav id="segMenu">
             <ul>
                 <li><a href="home/index">Home</a></li>
-                <li><a href="producto/producto_structure">Joyeria</a></li>
-                <li><a href="producto/producto_structure">Artesania</a></li>
-                <li><a href="producto/producto_structure">Pintura</a></li>
+                <li><a href="producto/index">Joyeria</a></li>
+                <li><a href="producto/index">Artesania</a></li>
+                <li><a href="producto/index">Pintura</a></li>
             </ul>
         </nav>
         <main>

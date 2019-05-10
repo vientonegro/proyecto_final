@@ -4,27 +4,27 @@ require_once(ROOT . DS . 'app' . DS . 'models' . DS . 'productoModel.php');
 class productoController extends Controller 
 {
 
-    public function index() {
+    // public function index() {
 
-        $this->render('index');
+    //     $this->render('index');
 
-    }
-    //PHP VIEW
-    // public function productos()
-    // {
-    // 	$d['productos'] = $this->producto_structure(producto::get_recent(0));
-    // 	$d['script'] = "index";
-    //     $d['title'] = "Bienvenidos al patrón";
-    //     $this->set($d);
-    //     $this->render('productos');
     // }
+    //PHP VIEW
+    public function index()
+    {
+    	$d['productos'] = $this->producto_structure(producto::get_recent(0));
+    	$d['script'] = "index";
+        $d['title'] = "Prueba";
+        $this->set($d);
+        $this->render('index');
+    }
 
     private function producto_structure($producto_array)
     {
     	$content = "";
     	foreach ($producto_array as $value) 
     	{
-    		// $content.='<a href="producto/detalle/'.$value["id"].'-'.$this->clean($value["titulo"]).'">';
+    		$content.='<a href="producto/detalle/'.$value["idproductos"].'-'.$this->clean($value["titulo"]).'">';
 				$content.='<div class="card">';
 					$content.='<div class="image_card" style="background-image: url('.WEBROOT.'img/'.$value['imagen'].')"></div>';
 					$content.='<h2>'.$value["titulo"].'</h2>';

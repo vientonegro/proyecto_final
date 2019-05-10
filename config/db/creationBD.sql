@@ -57,6 +57,30 @@ SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
+-- -----------------------------------------------------
+-- Data for table `CreationModel`.`usuarios`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `CreationModel`;
+INSERT INTO `CreationModel`.`usuarios` (`usuario`, `email`, `password`) VALUES ('viento', 'bla@bla', '1');
+INSERT INTO `CreationModel`.`usuarios` (`usuario`, `email`, `password`) VALUES ('naruto', 'nar@nar', '1');
+
+COMMIT;
+
+
+-- -----------------------------------------------------
+-- Data for table `CreationModel`.`productos`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `CreationModel`;
+INSERT INTO `CreationModel`.`productos` (`idproductos`, `categoria`, `titulo`, `imagen`, `descripcion`, `precio`, `usuarios_usuario`) VALUES (DEFAULT, 1, 'anillo', '9.jpg', 'el anillo para condenarlos a todos', 9000000, 'viento');
+INSERT INTO `CreationModel`.`productos` (`idproductos`, `categoria`, `titulo`, `imagen`, `descripcion`, `precio`, `usuarios_usuario`) VALUES (DEFAULT, 2, 'artesania', 'artesania.jpg', 'los mejores alfareros desde la tierra media', 20000, 'naruto');
+INSERT INTO `CreationModel`.`productos` (`idproductos`, `categoria`, `titulo`, `imagen`, `descripcion`, `precio`, `usuarios_usuario`) VALUES (DEFAULT, 3, 'pintura', '1.jpg', 'el ojo que todo lo ve de Mordor', 700000, 'viento');
+
+COMMIT;
+
+
+
 
 
 
