@@ -4,17 +4,13 @@ require_once(ROOT . DS . 'app' . DS . 'models' . DS . 'productoModel.php');
 class productoController extends Controller 
 {
 
-    // public function index() {
 
-    //     $this->render('index');
-
-    // }
     //PHP VIEW
     public function index()
     {
     	$d['productos'] = $this->producto_structure(producto::get_recent(0));
     	$d['script'] = "index";
-        $d['title'] = "Prueba";
+        // $d['title'] = "Prueba";
         $this->set($d);
         $this->render('index');
     }
@@ -41,7 +37,9 @@ class productoController extends Controller
     {
     	$pos = $_POST["pos"];
     	$d = $this->producto_structure(producto::get_recent($pos));
+        // $j = $this->producto_structure(producto::get_recentj($pos));
   		echo json_encode($d);
+        // echo json_encode($j);
     }
 
     public function clean($string) 

@@ -5,7 +5,7 @@
     
 </script>
 <div class="content">
-	<?php echo $productos;?>
+	<?php echo $joyeria;?>
 </div>
 <div class="loading">
 	<img src="<?php echo BASE_DOMAIN_DIR_URL;?>/webroot/img/loader.gif">

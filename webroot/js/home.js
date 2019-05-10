@@ -35,14 +35,14 @@ function get_recent()
 	$.ajax({
 		type: "post",
 		dataType: "json",
-		url: url+"home/recent",
+		url: url+"producto/recent",
 		data: "pos="+pos_actual,
 		beforeSend: function(){
 			$(".loading>img").show();
 			$(".more").hide();
 		},
 		success: function(data){
-			pos_actual+=9;
+			pos_actual+=4;
 			if(data.length>0)
 			{
 				$(".content").append(data);
