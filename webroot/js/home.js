@@ -61,6 +61,72 @@ function get_recent()
 	});
 }
 
+// -----Insertar
+
+
+		function readURL(input) {
+		    if (input.files && input.files[0]) {
+		        var reader = new FileReader();
+
+		        reader.onload = function (e) {
+		            $('#blah')
+		                .attr('src', e.target.result)
+		                .css("display", "block");
+		        };
+
+		        reader.readAsDataURL(input.files[0]);
+		    }
+		}
+	
+	
+$(document).ready(function(){
+
+	$("#insertar").on("submit", function(e){
+
+		e.preventDefault();
+		var flag = true;
+		msg = "";
+		
+		if($("#nombre").val()=="")
+		{	msg += "El Nombre del Artículo está vacío <br>";
+			$("#nombre").css("border", "solid 1px red");
+			flag = false;
+		}
+		else
+		{	msg += "";
+			$("#nombre").css("border", "solid 1px green");
+		}
+
+		if($("#descripcion").val()=="")
+		{	msg += "La descripcion del Artículo está vacía <br>";
+			$("#descripcion").css("border", "solid 1px red");
+			flag = false;
+		}
+		else
+		{	msg += "";
+			$("#descripcion").css("border", "solid 1px green");
+		}
+		if($("#user-img-file").val()=="")
+		{	msg += "Escoge una imagen <br>";
+			$("#user-img-file").css("border", "solid 1px red");
+			flag = false;
+		}
+		else
+		{	msg += "";
+			$("#user-img-file").css("border", "solid 1px green");
+		}
+		$("#msg").html(msg);
+
+		if(flag)
+		{
+			document.getElementById("insertar").submit();
+		}
+
+	});
+
+});
+
+
 // --------Login--Registro
 
 $(document).ready(function(){

@@ -14,7 +14,7 @@ class producto extends Model
 		static public function get_recent($pos)
 		{
 			$connect = Model::getInstanceDB();
-			$sql = ("SELECT * from ".self::$table." ORDER BY `categoria` DESC LIMIT 4,4");			
+			$sql = ("SELECT * from ".self::$table." ORDER BY `idproductos` LIMIT 0,6");			
 			$stmt = $connect->prepare($sql);
 			$stmt->execute();
 			$productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -27,7 +27,7 @@ class producto extends Model
 			return $productos;
 		}
 			// vista joyeria
-		// static public function get_recentj($pos)
+		// static public function get_recent($pos)
 		// {
 		// 	$connect = Model::getInstanceDB();
 		// 	$sql = ("SELECT * from ".self::$table." where categoria =1 ORDER BY `idproductos` DESC LIMIT 4,4");		
@@ -42,9 +42,6 @@ class producto extends Model
 			
 		// 	return $joyeria;
 		// }
-
-
-
 
 		static public function getById($idproductos)
 		{
@@ -64,6 +61,37 @@ class producto extends Model
 		        $stringDisplay .= ' ...';
 		    return $stringDisplay;
 		}
+
+		// Insertar productos
+
+	public function getInsert($categoria,$titulo,$imagen,$descripcion,$precio,$usuarios_usuario)
+    {
+
+		$idproductos = null;
+
+		$connect = Model::getInstanceDB();
+		//Gestión de la inserción del dato
+		
+		$sql = "INSERT INTO usuarios (`categoria`, `titulo`, `imagen`,`descripcion`, `precio`, `usuarios_usuario`) VALUES (:categoria, :titulo, :imagen, :descripcion, :precio, :usuarios_usuario)";
+		$stmt = $connect->prepare($sql);
+		$stmt->bindParam(':categoria', $categoria);		
+		$stmt->bindParam(':titulo', $titulo);
+		$stmt->bindParam(':imagen', $imagen);
+		$stmt->bindParam(':descripcion', $descripcion);		
+		$stmt->bindParam(':email', $email);
+		$stmt->bindParam(':usuarios_usuario', $usuarios_usuario);
+
+		//si se ejecuta correctamente el INSERT, retorno al controlador el mensaje de OK
+		if(!$stmt->execute()) {
+
+			return 'Insert incorrecto';
+
+		} else {
+
+			return 'Insert correcto';
+
+		}
+    }		
 
 
 }

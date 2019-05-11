@@ -49,5 +49,37 @@ class productoController extends Controller
 	   return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
 	}
 
+    // Insertar producto
+
+    public function insert()
+    {
+
+        if(isset($_POST["categoria"]) && isset($_POST["titulo"]) && isset($_POST["descripcion"]) && isset($_POST["precio"]) && isset($_POST["imagen"]) && isset($_POST["usuario"]))
+        {
+
+            $categoria = Security::secure_input($_POST["categoria"]);
+            $titulo = Security::secure_input($_POST["titulo"]);
+            $descripcion = Security::secure_input($_POST["descripcion"]);
+            $imagen = Security::secure_input($_POST["precio"]);
+            $regEm = Security::secure_input($_POST["imagen"]);
+            $regCon = Security::secure_input($_POST["usuario"]);
+      
+            $insertar = new producto();
+
+            $d= $insertar->getInsert($categoria,$titulo,$descripcion,$precio,$imagen,$usuario);
+
+            $this->set($d);
+            $this->render('index');
+
+        }
+        else
+        {
+            //Si quiere entrar directo sin POST salta el 404
+
+            header('Location: ' . BASE_DOMAIN_DIR_URL . 'webroot/404.php');
+        }
+
+    }
+
 
 }
