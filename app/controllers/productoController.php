@@ -6,13 +6,25 @@ class productoController extends Controller
 
 
     //PHP VIEW
-    public function index()
-    {
-    	$d['productos'] = $this->producto_structure(producto::get_recent(0));
+    public function index($cat=0)
+    {   
+    	$d['productos'] = $this->producto_structure(producto::get_recent(0,$cat));
     	$d['script'] = "index";
         // $d['title'] = "Prueba";
         $this->set($d);
         $this->render('index');
+    }
+    public function joyeria()
+    {   
+         $this->index(1);
+    }
+        public function artesania()
+    {   
+         $this->index(2);
+    }
+        public function pintura()
+    {   
+         $this->index(3);
     }
 
     private function producto_structure($producto_array)
@@ -36,10 +48,12 @@ class productoController extends Controller
     public function recent()
     {
     	$pos = $_POST["pos"];
-    	$d = $this->producto_structure(producto::get_recent($pos));
-        // $j = $this->producto_structure(producto::get_recentj($pos));
+        $cat = $_POST["cat"];
+        
+    	$d = $this->producto_structure(producto::get_recent($pos,$cat));
+        
   		echo json_encode($d);
-        // echo json_encode($j);
+     
     }
 
     public function clean($string) 
@@ -51,35 +65,7 @@ class productoController extends Controller
 
     // Insertar producto
 
-    public function insert()
-    {
 
-        if(isset($_POST["categoria"]) && isset($_POST["titulo"]) && isset($_POST["descripcion"]) && isset($_POST["precio"]) && isset($_POST["imagen"]) && isset($_POST["usuario"]))
-        {
-
-            $categoria = Security::secure_input($_POST["categoria"]);
-            $titulo = Security::secure_input($_POST["titulo"]);
-            $descripcion = Security::secure_input($_POST["descripcion"]);
-            $imagen = Security::secure_input($_POST["precio"]);
-            $regEm = Security::secure_input($_POST["imagen"]);
-            $regCon = Security::secure_input($_POST["usuario"]);
-      
-            $insertar = new producto();
-
-            $d= $insertar->getInsert($categoria,$titulo,$descripcion,$precio,$imagen,$usuario);
-
-            $this->set($d);
-            $this->render('index');
-
-        }
-        else
-        {
-            //Si quiere entrar directo sin POST salta el 404
-
-            header('Location: ' . BASE_DOMAIN_DIR_URL . 'webroot/404.php');
-        }
-
-    }
 
 
 }

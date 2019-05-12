@@ -11,10 +11,15 @@ class producto extends Model
 	private $usuarios_usuario;
 	static $table = "productos";
 
-		static public function get_recent($pos)
-		{
+		static public function get_recent($pos,$cat=null)
+		{	
 			$connect = Model::getInstanceDB();
-			$sql = ("SELECT * from ".self::$table." ORDER BY `idproductos` LIMIT 0,6");			
+			$filtro = "";
+			if($cat)
+			{
+				$filtro = " where categoria = $cat";
+			}
+			$sql = ("SELECT * from ".self::$table." " .$filtro. " ORDER BY `idproductos` LIMIT $pos, 6");			
 			$stmt = $connect->prepare($sql);
 			$stmt->execute();
 			$productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -27,21 +32,6 @@ class producto extends Model
 			return $productos;
 		}
 			// vista joyeria
-		// static public function get_recent($pos)
-		// {
-		// 	$connect = Model::getInstanceDB();
-		// 	$sql = ("SELECT * from ".self::$table." where categoria =1 ORDER BY `idproductos` DESC LIMIT 4,4");		
-		// 	$stmt = $connect->prepare($sql);
-		// 	$stmt->execute();
-		// 	$joyeria = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-		// 	for($i=0; $i<count($joyeria); $i++)
-		// 	{
-		// 		$joyeria[$i]["descripcion"] = utf8_encode(self::getSubString($joyeria[$i]["descripcion"]));
-		// 	}
-			
-		// 	return $joyeria;
-		// }
 
 		static public function getById($idproductos)
 		{

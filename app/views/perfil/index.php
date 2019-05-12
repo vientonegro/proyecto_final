@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') or exit ('No se permite acceso directo');?>
 
-	<form class="insertar" method="POST" id="insertar" action="controller.php" enctype="multipart/form-data">
+	<form class="insertar" method="POST" id="insertar" action="perfil/insert" enctype="multipart/form-data">
 		<h2 >Insertar</h2>
 		<div>
 			<ul>
@@ -11,10 +11,10 @@
 				 <input type="text" name="titulo" placeholder="titulo" id="titulo"/> 
 				</li>
 				<li> 
-				<textarea placeholder="Introduce el texto" name="descripcion" id="descripcion"  cols="30" rows="5" ></textarea> 
+				<textarea placeholder="Introduce el texto" name="descripcion" id="descripcion"  cols="30" rows="10" ></textarea> 
 				</li>
 				</li>
-				 <input type="text" name="precio" placeholder="precio" id="precio"/> 
+				 <input type="numbre" name="precio" placeholder="precio" id="precio"/> 
 				</li>
 				<li>
 					<img src="" id="blah" >

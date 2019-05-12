@@ -20,29 +20,30 @@
     	}
 	}
 
-var pos_actual = 9;
+var pos_actual = 6;
 
 $(document).ready(function(){
 
 	$("span.more").on("click", function(){
-		get_recent();
+		var cat_actual = $( "button.more" ).data( "cat");
+		get_recent(cat_actual);
 	});
 
 });
 
-function get_recent()
+function get_recent(cat_actual)
 {
 	$.ajax({
 		type: "post",
 		dataType: "json",
 		url: url+"producto/recent",
-		data: "pos="+pos_actual,
+		data: "pos="+pos_actual +"&cat="+cat_actual,
 		beforeSend: function(){
 			$(".loading>img").show();
 			$(".more").hide();
 		},
 		success: function(data){
-			pos_actual+=4;
+			pos_actual+=6;
 			if(data.length>0)
 			{
 				$(".content").append(data);

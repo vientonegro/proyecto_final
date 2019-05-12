@@ -67,9 +67,9 @@
         <nav id="segMenu">
             <ul>
                 <li><a href="home/index">Home</a></li>
-                <li><a href="producto/index">Joyeria</a></li>
-                <li><a href="producto/index">Artesania</a></li>
-                <li><a href="producto/index">Pintura</a></li>
+                <li><a href="producto/joyeria">Joyeria</a></li>
+                <li><a href="producto/artesania">Artesania</a></li>
+                <li><a href="producto/pintura">Pintura</a></li>
             </ul>
         </nav>
         <main>
