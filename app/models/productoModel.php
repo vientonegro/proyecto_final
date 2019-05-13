@@ -31,7 +31,6 @@ class producto extends Model
 			
 			return $productos;
 		}
-			// vista joyeria
 
 		static public function getById($idproductos)
 		{
@@ -51,37 +50,5 @@ class producto extends Model
 		        $stringDisplay .= ' ...';
 		    return $stringDisplay;
 		}
-
-		// Insertar productos
-
-	public function getInsert($categoria,$titulo,$imagen,$descripcion,$precio,$usuarios_usuario)
-    {
-
-		$idproductos = null;
-
-		$connect = Model::getInstanceDB();
-		//Gestión de la inserción del dato
-		
-		$sql = "INSERT INTO usuarios (`categoria`, `titulo`, `imagen`,`descripcion`, `precio`, `usuarios_usuario`) VALUES (:categoria, :titulo, :imagen, :descripcion, :precio, :usuarios_usuario)";
-		$stmt = $connect->prepare($sql);
-		$stmt->bindParam(':categoria', $categoria);		
-		$stmt->bindParam(':titulo', $titulo);
-		$stmt->bindParam(':imagen', $imagen);
-		$stmt->bindParam(':descripcion', $descripcion);		
-		$stmt->bindParam(':email', $email);
-		$stmt->bindParam(':usuarios_usuario', $usuarios_usuario);
-
-		//si se ejecuta correctamente el INSERT, retorno al controlador el mensaje de OK
-		if(!$stmt->execute()) {
-
-			return 'Insert incorrecto';
-
-		} else {
-
-			return 'Insert correcto';
-
-		}
-    }		
-
 
 }

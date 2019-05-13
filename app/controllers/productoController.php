@@ -63,9 +63,17 @@ class productoController extends Controller
 	   return preg_replace('/[^A-Za-z0-9\-]/', '', $string); // Removes special chars.
 	}
 
-    // Insertar producto
+    public function detalle($idproductos)
+    {   
 
-
+        $id = explode("-", $idproductos)[0];
+        $dextra['producto'] = producto::getById($id);
+        $dextra['script'] = "detalle";
+        $dextra['title'] = $dextra['producto']['titulo'];
+        $this->set($dextra);
+        $this->render('detalle');
+       
+    }
 
 
 }

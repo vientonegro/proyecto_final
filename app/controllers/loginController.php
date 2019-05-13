@@ -32,7 +32,7 @@ class loginController extends Controller {
 	}
 	public function salir()
 	{
-	session_start();
+
 	unset($_SESSION["usuario"]);	
 	session_destroy();
 	header('Location: ' . BASE_DOMAIN_DIR_URL . 'home/index');

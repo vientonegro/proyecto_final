@@ -14,7 +14,8 @@
         <script type="text/javascript" src="webroot/js/home.js"></script>
         <script type="text/javascript" src="webroot/js/contacto.js"></script>
         <link rel="stylesheet" type="text/css" href="webroot/css/contacto.css">
-        <link rel="stylesheet" type="text/css" href="webroot/css/dinamic.css">   
+        <link rel="stylesheet" type="text/css" href="webroot/css/dinamic.css">
+        <link rel="stylesheet" type="text/css" href="webroot/css/detalle.css">   
     </head>
     <body>
       <?php
