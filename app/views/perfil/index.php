@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') or exit ('No se permite acceso directo');?>
 
-	<form class="insertar" method="POST" id="insertar" action="perfil/insert" enctype="multipart/form-data">
+	<form class="insertar" method="POST" id="insertar" action="perfil/index" enctype="multipart/form-data">
 		<h2 >Insertar</h2>
 		<div>
 			<ul>

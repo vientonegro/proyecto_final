@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') or exit ('No se permite acceso directo');
 
-class producto extends Model
+class perfil extends Model
 {
 	private $idproductos;
 	private $categoria;

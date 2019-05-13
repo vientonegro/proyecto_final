@@ -4,7 +4,7 @@ require_once(ROOT . DS . 'app' . DS . 'models' . DS . 'productoModel.php');
 
 class perfilController extends Controller 
 {
-    public function index($cat=0)
+    public function index()
     {   
 
         $d['script'] = "index";
@@ -26,11 +26,11 @@ class perfilController extends Controller
             // $imagen = Security::secure_input($_POST["imagen"]);
             $usuario = Security::secure_input($_POST["usuario"]);
       
-            $insertar = new producto();
+            $insertar = new perfil();
 
-            $d= $insertar->getInsert($categoria,$titulo,$descripcion,$precio,$imagen,$usuario);
+            $d['mensaje']= $insertar->getInsert($categoria,$titulo,$descripcion,$precio,$imagen,$usuario);
 
-            $this->set($d);
+            $this->set($d['mensaje']);
             $this->render('index');
 
         }
