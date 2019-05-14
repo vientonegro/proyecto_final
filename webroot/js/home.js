@@ -88,18 +88,27 @@ $(document).ready(function(){
 		var flag = true;
 		msg = "";
 		
-		if($("#nombre").val()=="")
-		{	msg += "El Nombre del Artículo está vacío <br>";
-			$("#nombre").css("border", "solid 1px red");
+		if($("#categoria").val()=="")
+		{	msg += "La categoria del Artículo está vacía <br>";
+			$("#categoria").css("border", "solid 1px red");
 			flag = false;
 		}
 		else
 		{	msg += "";
-			$("#nombre").css("border", "solid 1px green");
+			$("#categoria").css("border", "solid 1px green");
+		}
+		if($("#titulo").val()=="")
+		{	msg += "El titulo del Artículo está vacío <br>";
+			$("#titulo").css("border", "solid 1px red");
+			flag = false;
+		}
+		else
+		{	msg += "";
+			$("#titulo").css("border", "solid 1px green");
 		}
 
 		if($("#descripcion").val()=="")
-		{	msg += "La descripcion del Artículo está vacía <br>";
+		{	msg += "La descripcion del Artículo está vacío <br>";
 			$("#descripcion").css("border", "solid 1px red");
 			flag = false;
 		}
@@ -107,6 +116,16 @@ $(document).ready(function(){
 		{	msg += "";
 			$("#descripcion").css("border", "solid 1px green");
 		}
+		if($("#precio").val()=="")
+		{	msg += "El precio del Artículo está vacío <br>";
+			$("#precio").css("border", "solid 1px red");
+			flag = false;
+		}
+		else
+		{	msg += "";
+			$("#precio").css("border", "solid 1px green");
+		}
+
 		if($("#user-img-file").val()=="")
 		{	msg += "Escoge una imagen <br>";
 			$("#user-img-file").css("border", "solid 1px red");
@@ -116,6 +135,17 @@ $(document).ready(function(){
 		{	msg += "";
 			$("#user-img-file").css("border", "solid 1px green");
 		}
+		if($("#usuario").val()=="" )
+		{	msg += "El usuario del Artículo está vacío <br>";
+			$("#usuario").css("border", "solid 1px red");
+			flag = false;
+		}
+		else
+		{	msg += "";
+			$("#usuario").css("border", "solid 1px green");
+		}
+
+
 		$("#msg").html(msg);
 
 		if(flag)

@@ -14,13 +14,13 @@
 				<textarea placeholder="Introduce el texto" name="descripcion" id="descripcion"  cols="30" rows="10" ></textarea> 
 				</li>
 				</li>
-				 <input type="numbre" name="precio" placeholder="precio" id="precio"/> 
+				 <input type="number" name="precio €" placeholder="precio" id="precio"/>€ 
 				</li>
 				<li>
 					<img src="" id="blah" >
 				</li>
 				<li>
-					<input type="file" id="imagen" name="imagen" onchange="readURL(this)">
+					<input type="file" id="user-img-file" name="user-img-file" onchange="readURL(this)">
 				</li>
 				 <input type="text" name="usuario" placeholder="usuario" id="usuario"/> 
 				</li>
