@@ -1,82 +1,103 @@
-function validarNombre(e){
-  e.preventDefault();
- 
-    var txtNombre = document.getElementById('nombre').value;
-       //Test nombre obligatorio
-    if(txtNombre == null || txtNombre.length < 3 || !/^[a-zA-Z]*$/.test(txtNombre)) {
-      document.getElementById("caja1").innerHTML ="Has de escribir minimo tres letras";
-      document.getElementById("caja1").style.color = "red";
-      document.getElementById("nombre").style.border = "1px solid red";
-    }else {
-      document.getElementById("nombre").style.border = "1px solid lightgrey";
-      document.getElementById("caja1").innerHTML ="";
-    }
 
-}
-function validarApellido(e){
-  e.preventDefault();
+$(document).ready(function(){
 
-    var txtApellido = document.getElementById('apellido').value;
+  $("#contacto").on("submit", function(e){
 
-        //Test apellidos obligatorio
-    if(txtApellido == null || txtApellido.length < 3 || !/^[a-zA-Z]*$/.test(txtApellido)){
-      document.getElementById("caja2").innerHTML ="Has de escribir minimo tres letras";
-      document.getElementById("caja2").style.color = "red";
-      document.getElementById("apellido").style.border = "1px solid red";
-    }else {
-      document.getElementById("apellido").style.border = "1px solid lightgrey";
-      document.getElementById("caja2").innerHTML ="";
-    } 
-}
+    e.preventDefault();
+    var flag = true;
+    msg = "";
+    
+    $("#msg").html(msg);
 
-function validarMovil(e){
-  e.preventDefault(); 
-
-  var txtMovil = document.getElementById('movil').value;
-
-  var txtDNI = document.getElementById('movil').value;
-  var primer_num = txtMovil.substring(0, 1);
-  
-    // Movil
-    if(primer_num != 6 && primer_num != 7 && primer_num != 9 || txtMovil.length !=9 ){
-
-      document.getElementById("caja4").innerHTML = "Movil incorrecto ";
-      document.getElementById("caja4").style.color = "red";
-      document.getElementById("movil").style.border = "1px solid red";
-    }else {
-      document.getElementById("movil").style.border = "1px solid lightgrey";
-      document.getElementById("caja4").innerHTML ="";
-    }
-}
-
-function validar_todo(e)
-{
-   e.preventDefault();
-
-  document.getElementById("mensaje").style.display = "none";
-  validarNombre(e);
-  validarApellido(e);
-  validarMovil(e);
-
-  var caja1 = document.getElementById("caja1").value;
-  var caja2 = document.getElementById("caja2").value;
-  var caja4 = document.getElementById("caja4").value;
-
-  if (typeof(caja1) == "undefined" && typeof(caja2) == "undefined" && typeof(caja4) == "undefined")
-  {
-    var nombre = document.getElementById("nombre").value;
-    var apellido = document.getElementById("apellido").value;
-    var telefono = document.getElementById("movil").value;
-    if (nombre != "" && apellido != ""  && movil != "")
+    if(flag)
     {
-      document.getElementById("mensaje").style.display = "block";
+      document.getElementById("contacto").submit();
+      msg="Mensaje enviado correctamente";
     }
-    document.getElementById("nombre").value = "";
-    document.getElementById("apellido").value = "";
-    document.getElementById("movil").value = "";
-  }
 
-}  
+  });
+
+});
+
+
+
+// function validarNombre(e){
+//   e.preventDefault();
+ 
+//     var txtNombre = document.getElementById('nombre').value;
+//        //Test nombre obligatorio
+//     if(txtNombre == null || txtNombre.length < 3 || !/^[a-zA-Z]*$/.test(txtNombre)) {
+//       document.getElementById("caja1").innerHTML ="Has de escribir minimo tres letras";
+//       document.getElementById("caja1").style.color = "red";
+//       document.getElementById("nombre").style.border = "1px solid red";
+//     }else {
+//       document.getElementById("nombre").style.border = "1px solid lightgrey";
+//       document.getElementById("caja1").innerHTML ="";
+//     }
+
+// }
+// function validarEmail(e){
+//   e.preventDefault();
+
+//     var txtEmail = document.getElementById('email').value;
+
+        
+//     if(txtEmail == null || txtEmail.length < 3 ){
+//       document.getElementById("caja2").innerHTML ="Has de escribir minimo tres letras";
+//       document.getElementById("caja2").style.color = "red";
+//       document.getElementById("email").style.border = "1px solid red";
+//     }else {
+//       document.getElementById("email").style.border = "1px solid lightgrey";
+//       document.getElementById("caja2").innerHTML ="";
+//     } 
+// }
+
+// function validarMensaje(e){
+//   e.preventDefault(); 
+
+//   var txtMensaje = document.getElementById('mensaje').value;
+
+
+//     // Movil
+//     if(txtMensaje == null || txtMensaje.length < 9 ){
+
+//       document.getElementById("caja4").innerHTML = "Has de escribir minimo 9 letras ";
+//       document.getElementById("caja4").style.color = "red";
+//       document.getElementById("mensaje").style.border = "1px solid red";
+//     }else {
+//       document.getElementById("mensaje").style.border = "1px solid lightgrey";
+//       document.getElementById("caja4").innerHTML ="";
+//     }
+// }
+
+// function validar_todo(e)
+// {
+//    e.preventDefault();
+
+//   document.getElementById("mensaje").style.display = "none";
+//   validarNombre(e);
+//   validarEmail(e);
+//   validarMensaje(e);
+
+//   var caja1 = document.getElementById("caja1").value;
+//   var caja2 = document.getElementById("caja2").value;
+//   var caja4 = document.getElementById("caja4").value;
+
+//   if (typeof(caja1) == "undefined" && typeof(caja2) == "undefined" && typeof(caja4) == "undefined")
+//   {
+//     var nombre = document.getElementById("nombre").value;
+//     var email = document.getElementById("email").value;
+//     var mensaje = document.getElementById("mensaje").value;
+//     if (nombre != "" && email != ""  && mensaje != "")
+//     {
+//       document.getElementById("mensaje").style.display = "block";
+//     }
+//     document.getElementById("nombre").value = "";
+//     document.getElementById("email").value = "";
+//     document.getElementById("mensaje").value = "";
+//   }
+
+// }  
  
    
 

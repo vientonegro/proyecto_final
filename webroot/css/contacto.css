@@ -1,14 +1,191 @@
 
-div.contacto
+.contacto{
+    position: relative;
+    background: url('https://github.com/OlgaKoplik/CodePen/blob/master/bg.png?raw=true') no-repeat center center;
+    margin-bottom: 150px;
+    max-width: 1110px;
+    height: 780px;
+    width: 100%;
+    background-size: 100%;
+    margin: 0 auto;
+}
+.conta{
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    width: 100%;
+}
+.item{
+    position: absolute;
+}
+
+.inp{
+    max-width: 260px;
+    border: none;
+    font-size: 19px;
+    width: 22vw;
+}
+.inp:focus{
+    outline-color: #011d6a;
+}
+.lab{
+    margin-right: 6px;
+    font-size: 18px;
+}
+.area{
+    max-width: 380px;
+    width: 30vw;
+    height: 400px;
+    font-size: 18px;
+    border: none;
+    resize: none;
+}
+.area:focus{
+    outline-color: #011d6a;
+}
+
+.nom{
+    top: 49%;
+    right: 11%;
+}
+
+.ap{
+    top: 57%;
+    right: 11%;
+}
+
+.ema{
+    top: 65%;
+    right: 11%;
+}
+.co{
+    display: flex;
+    flex-direction: column;
+}
+.me{
+    top: 30%;
+    left: 15%;
+    width: 300px;
+}
+.conta__but{
+    position: absolute;
+    top: 75%;
+    right: 17%;
+}
+.bu{
+    width: 200px;
+    height: 40px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    background-color: #011D6A;
+}
+
+.bu:hover{
+    background-color: #eab46b;
+}
+
+
+.decor{
+  display:none;
+}
+
+@media screen and (max-width: 1024px) {
+  .contact {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 10px 10px 55px 1px rgba(0,0,0,0.1);
+    max-width: 600px;
+    max-height: 700px;
+    margin: 0 auto;
+    transform: translateY(40px);
+  }
+   .contact__form{
+     margin-top: 160px;
+     width: 60%;
+     margin-bottom: 60px;
+  }
+  .form__item{
+    position: static;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+  }
+  label{
+    margin-bottom: 10px;
+  }
+  input{
+    border: 1px solid #011d6a;
+    margin-bottom: 15px;
+    max-width: 100%;
+    width: 350px;
+    height: 30px;
+  }
+  textarea{
+    border: 1px solid #011d6a;
+    width: 350px;
+    max-width: 100%;
+    height: 140px;
+    margin-bottom: 25px;
+  }
+  .button{
+    position: static;
+    margin-bottom: 20px;
+    max-width: 360px;
+    width: 100%;
+  }
+  .date{
+    top: 7%;
+    left: -25.8%;
+    font-size: 13px;
+  }
+  .decor{
+    display: block;
+    position: absolute;
+  }
+  .marke{
+    top: 3%;
+    right: 3%;
+  }
+  .schtamp{
+    top: 4%;
+    left: 3%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .date{
+    width: max-content;
+    left: 10%;
+  }
+}
+
+.fa-instagram{
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  font-size: 38px;
+  color: #011D6A;
+}
+
+.fa-instagram:hover{
+  font-size: 42px;
+  color: #dca118;
+  transition: all .1s linear;
+  cursor: pointer;
+}
+
+/*-----------Login--Registro*/
+/*div.contacto
 {
 	background-size: cover;
-	/*background-position: center;*/
 	background-attachment: fixed;
-	background-repeat: no-repeat;
-	/*background-color: rgba(255,255,255,0);*/
-	
-}
-form
+	background-repeat: no-repeat;	
+}*/
+.LG
 {
 	width: 30%;
     margin: 50px auto;
@@ -18,11 +195,11 @@ form
 	text-align: center;
 	background: white;
 }
-form:hover
+.LG:hover
 {
 box-shadow: 2px 2px 10px black;
 }
-input
+.loRe
 {
 	margin: 10px;
 	width: 90%;

@@ -1,12 +1,12 @@
 <?php defined('BASEPATH') or exit ('No se permite acceso directo');?>
 
 
-		<form method="post" action="login/login" id="login">
+		<form class="LG" method="post" action="login/login" id="login">
 			<h3>LOGIN</h3>
-			<input type="text" name="usuarioL" id="usuarioL" placeholder="usuario">
-			<input type="password" name="contraL" id="contraL" placeholder="contraseña">
+			<input class="loRe" type="text" name="usuarioL" id="usuarioL" placeholder="usuario">
+			<input class="loRe" type="password" name="contraL" id="contraL" placeholder="contraseña">
 			<div style="text-align: center">
-				<input type="button" value="Entrar" id="loginB">
+				<input class="loRe" type="button" value="Entrar" id="loginB">
 			</div>
 			<div id="errorsL"></div>
 		</form>

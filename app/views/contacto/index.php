@@ -1,21 +1,45 @@
 <?php defined('BASEPATH') or exit ('No se permite acceso directo');?>
 
 
-
 <div class="contacto">
-    <form id="contacto" method="post" action="contacto.php">
+  <form class="conta" action="">
+    <div class="nom item">
+      <label class="lab">Nombre:</label>
+      <input class="inp" type="text" name="name" required/>
+    </div>
+    <div class="ap item">
+       <label class="lab">Apellido:</label>
+       <input class="inp" type="text" name="apellido" required/>
+     </div>
+     <div class="ema item">
+        <label class="lab">Email:</label>
+        <input class="inp" type="email" name="email" required></input>
+      </div>
+      <div class="me item co">
+         <label class="lab">Mensaje:</label>
+         <textarea class="area" type="text" required></textarea>
+       </div>
+       <button type="submit" class="bu conta__but">Enviar</button>
+  </form>
+</div>
+
+
+
+
+
+
+<!-- <div class="contacto">
+    <form id="contacto" method="post" action="contacto/index">
      <ul>
       <li><h3 class="contacto">Contacto</h3></li>
-      <!-- <li><label>Nombre:</label></li> -->
-      <li><input id="nombre" name="nombre" type="text" placeholder="Nombre" onkeyup="validarNombre(event)"><div id="caja1"></li>
-      <!-- <li><label>Apellido:</label></li> -->
-      <li><input id="apellido" name="apellido" placeholder="Apellido" type="text" onkeyup="validarApellido(event)"><div id="caja2"></li>
-      <!-- <li><label>Movil:</label></li> -->
-      <li><input id="movil" name="movil" type="number" placeholder="Movil" onkeyup="validarMovil(event)"><div id="caja4"></li>
-      <!-- <li><label>Mensaje:</label></li> -->
-      <li><textarea rows="4" cols="50" placeholder="Introduce el mensaje"></textarea><div id="caja4"></li>  
-      <input type="submit" value="Enviar" onclick="validar_todo(event)">
+
+      <li><input id="nombre" name="nombre" type="text" placeholder="Nombre" required></li>
+
+      <li><input id="email" name="email" placeholder="email" type="email" required></li>
+
+      <li><textarea id="mensaje" name="mensaje" rows="10" cols="50" placeholder="Introduce el mensaje"  required></textarea></li>  
+      <input type="submit" value="Enviar" ></li>
       <li><span id="mensaje"></span></li>
     </ul>
   </form>
-</div>
+</div> -->
