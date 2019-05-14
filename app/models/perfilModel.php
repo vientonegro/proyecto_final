@@ -41,13 +41,25 @@ class perfil extends Model
 
 		}
     }
-    // public function getIma($ima)
-    // {
-    // 	$directorio = getcwd().'BASE_DOMAIN_DIR_IMG';
-    //    	$foto_nueva = $directorio.$_FILES['user-img-file']['name'];
-    //    	$result =move_uploaded_file($_FILES["user-img-file"]["tmp_name"], $foto_nueva);
-    //   	$imagen = Security::secure_input($_FILES["user-img-file"]["name"]);
-    // }		
+    public function getIma()
+    {
+		$directorio = getcwd().'/img/';
+		$foto_nueva = $directorio.$_FILES['user-img-file']['name'];
+		// exit();
+		// print_r($foto_nueva);
+		$result =move_uploaded_file($_FILES["user-img-file"]["tmp_name"], $foto_nueva);
+		// print_r($result);
+
+
+		$img = $_FILES["user-img-file"]["name"];
+
+		//guardar el formulario sesion, para poder ver los datos
+		$_SESSION['nombre'] = $_POST['nombre'];
+		$_SESSION['foto'] = "/examen/img/".$_FILES['user-img-file']['name'];
+		$_SESSION['descripcion'] = $_POST['descripcion'];
+		perfil::setfile($img);
+		
+    }		
 
 
 }
