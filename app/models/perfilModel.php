@@ -13,7 +13,7 @@ class perfil extends Model
 
 		// Insertar productos
 
-	public function getInsert($categoria,$titulo,$imagen,$descripcion,$precio,$usuarios_usuario)
+	public function getsubir($categoria,$titulo,$imagen,$descripcion,$precio,$usuarios_usuario)
     {
 
 		$idproductos = null;
@@ -40,7 +40,14 @@ class perfil extends Model
 			return 'Insert correcto';
 
 		}
-    }		
+    }
+    // public function getIma($ima)
+    // {
+    // 	$directorio = getcwd().'BASE_DOMAIN_DIR_IMG';
+    //    	$foto_nueva = $directorio.$_FILES['user-img-file']['name'];
+    //    	$result =move_uploaded_file($_FILES["user-img-file"]["tmp_name"], $foto_nueva);
+    //   	$imagen = Security::secure_input($_FILES["user-img-file"]["name"]);
+    // }		
 
 
 }

@@ -6,15 +6,14 @@ class perfilController extends Controller
 {
     public function index()
     {   
-
-
         $this->render('index');
     }
 
     public function insert()
     {
-        var_dump(insert);
-        if(isset($_POST["categoria"]) && isset($_POST["titulo"]) && isset($_POST["descripcion"]) && isset($_POST["precio"]) && isset($_POST["usuario"]) && isset($_FILES["user-img-file"]))
+        // var_dump($_FILES);
+        if(isset($_POST["categoria"]) && isset($_POST["titulo"]) && isset($_POST["descripcion"]) && isset($_POST["precio"]) && isset($_POST["usuario"]) 
+            && isset($_FILES["user-img-file"]))
         {
 
             $categoria = Security::secure_input($_POST["categoria"]);
@@ -30,7 +29,7 @@ class perfilController extends Controller
 
             $insertar = new perfil();
 
-            $d['mensaje']= $insertar->getInsert($categoria,$titulo,$descripcion,$precio,$imagen,$usuario,$imagen);
+            $d['mensaje']= $insertar->getsubir($categoria,$titulo,$descripcion,$precio,$usuario,$imagen);
 
             $this->set($d['mensaje']);
             $this->render('index');
