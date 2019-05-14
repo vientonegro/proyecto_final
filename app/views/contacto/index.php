@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') or exit ('No se permite acceso directo');?>
 
-
-<div class="contacto">
+<h1 class="tacto">Contacto</h1>
+<div class="contactor">
   <form class="conta" action="">
     <div class="nom item">
       <label class="lab">Nombre:</label>
@@ -24,7 +24,7 @@
 </div>
 
 
-
+<!-- /proyecto_final/webroot/img/postal.jpg -->
 
 
 
