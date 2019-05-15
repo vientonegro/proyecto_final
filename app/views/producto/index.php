@@ -10,7 +10,8 @@
 		 <option value="1">Novedades</option>
 		 <option value="2">Antiguos</option>
 		 <option value="3">Artistas</option>
-		 <option value="4">Precio</option>
+		 <option value="4">Precio más bajo</option>
+		 <option value="5">Precio más alto</option>		 
 	</select>
 
 

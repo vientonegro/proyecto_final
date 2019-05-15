@@ -92,4 +92,6 @@ COMMIT;
 select * from productos where categoria =1 ORDER BY `idproductos` DESC LIMIT 2;
 select * from usuarios;
 select * from productos;
-SELECT * from productos ORDER BY `idproductos` DESC LIMIT 6;
+SELECT * from productos where categoria ORDER BY `idproductos` DESC LIMIT 6;
+SELECT * from productos  ORDER BY `usuarios_usuario`  LIMIT 6;
+SELECT * from productos  ORDER BY `precio`   LIMIT 6;
