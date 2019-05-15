@@ -20,7 +20,7 @@
     	}
 	}
 
-var pos_actual = 6;
+var pos_actual = 0;
 
 $(document).ready(function(){
 
@@ -43,7 +43,7 @@ function get_recent(cat_actual)
 			$(".more").hide();
 		},
 		success: function(data){
-			pos_actual+=6;
+			pos_actual+=18;
 			if(data.length>0)
 			{
 				$(".content").append(data);

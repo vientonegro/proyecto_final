@@ -19,7 +19,7 @@ class producto extends Model
 			{
 				$filtro = " where categoria = $cat";
 			}
-			$sql = ("SELECT * from ".self::$table." " .$filtro. " ORDER BY `idproductos` LIMIT $pos, 6");			
+			$sql = ("SELECT * from ".self::$table." " .$filtro. " ORDER BY `idproductos` LIMIT $pos, 3");			
 			$stmt = $connect->prepare($sql);
 			$stmt->execute();
 			$productos = $stmt->fetchAll(PDO::FETCH_ASSOC);

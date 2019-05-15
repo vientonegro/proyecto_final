@@ -18,13 +18,14 @@ class homeController extends Controller {
     	$content = "";
     	foreach ($producto_array as $value) 
     	{
-    		$content.='<a href="producto/detalle/'.$value["idproductos"].'-'.$this->clean($value["titulo"]).'">';
-				$content.='<div class="card">';
-					$content.='<div class="image_card" style="background-image: url('.WEBROOT.'img/'.$value['imagen'].')"></div>';
-					$content.='<h2>'.$value["titulo"].'</h2>';
-					$content.='<p>'.$value["descripcion"].'</p>';
-				$content.='</div>';
-			$content.='</a>';
+            $content.='<a href="producto/detalle/'.$value["idproductos"].'-'.$this->clean($value["titulo"]).'">';
+                $content.='<div class="card">';
+                    $content.='<div class="image_card" style="background-image: url('.WEBROOT.'img/'.$value['imagen'].')"></div>';
+                    $content.='<h2>'.$value["titulo"].'</h2>';
+                    $content.='<p>'.$value["descripcion"].'</p>';
+                    $content.='<p>'."Precio: ".$value["precio"]." €".'</p>';
+                $content.='</div>';
+            $content.='</a>';
     	}
 
     	return $content;

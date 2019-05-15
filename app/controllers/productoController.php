@@ -38,6 +38,7 @@ class productoController extends Controller
 					$content.='<div class="image_card" style="background-image: url('.WEBROOT.'img/'.$value['imagen'].')"></div>';
 					$content.='<h2>'.$value["titulo"].'</h2>';
 					$content.='<p>'.$value["descripcion"].'</p>';
+                    $content.='<p>'."Precio: ".$value["precio"]." €".'</p>';
 				$content.='</div>';
 			$content.='</a>';
     	}

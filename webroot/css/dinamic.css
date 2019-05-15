@@ -1,5 +1,5 @@
 
-main div.content
+.content
 {
 	max-width: 65%;
 	margin: auto;
@@ -8,9 +8,10 @@ main div.content
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
+
 }
 
-main div.card
+.card
 {
 	width: 300px;
 	height: 390px;
@@ -18,36 +19,46 @@ main div.card
 	border-radius: 3px;
 	background-color: white;
 	cursor: pointer;
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 	top: 0;
 	left: 0;
 	transition: all .2s;
 	position: relative;
+	box-shadow: 1px 1px 15px black;
 }
-main a
+a
 {
 	text-decoration: none;
 	color: black;
 }
-main div.card:hover
+.card:hover
 {
 	top: -5px;
 	left: -5px;
 	box-shadow: 2px 2px 2px black;
 }
+ p
+ {
+ 	font-family: lustra;
+ 	text-align: center;
+ 	padding-bottom: 3px;
+ }
 
-main div.card>div.image_card
+.card>div.image_card
 {
 	height: 60%;
-	background-image: url(../img/ffxv.jpg);
 	background-size: cover;
 	background-position: center;
 }
 
-main div.card>h2
+.card>h2
 {
 	text-align: center;
 	font-size: 20px;
+ 	font-family: lustra;
+ 	padding-bottom: 10px;
+ 	padding-top: 5px;
+
 }
 
 .loading

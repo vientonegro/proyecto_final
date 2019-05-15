@@ -54,6 +54,8 @@ h3.contacto
 	text-align: center;
 	font-family: lustra;
 	font-size: 60px;
+    
+
 }
 .contactor{
     position: relative;
@@ -64,12 +66,14 @@ h3.contacto
     width: 100%;
     background-size: 85%;
     margin: 0 auto;
+
 }
 .conta{
     display: flex;
     flex-direction: column;
     max-width: 700px;
     width: 100%;
+
 }
 .item{
     position: absolute;
