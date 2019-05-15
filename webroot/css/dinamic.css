@@ -1,7 +1,7 @@
 
 main div.content
 {
-	max-width: 800px;
+	max-width: 65%;
 	margin: auto;
 	padding: 40px 10px;
 	display: flex;
@@ -77,5 +77,10 @@ span.more
     border-radius: 6px;
     text-align: center;
     cursor: pointer;
+}
+.ordenar
+{
+    margin-top: 3%;
+    margin-left: 20%;
 }
 

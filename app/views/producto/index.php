@@ -4,6 +4,16 @@
     var url = "<?php echo BASE_DOMAIN_DIR_URL?>";
     
 </script>
+
+	<select class="ordenar">
+		 <option value="0">Ordenar por:</option>
+		 <option value="1">Novedades</option>
+		 <option value="2">Antiguos</option>
+		 <option value="3">Artistas</option>
+		 <option value="4">Precio</option>
+	</select>
+
+
 <div class="content">
 	<?php echo $productos;?>
 </div>

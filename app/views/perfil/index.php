@@ -5,7 +5,12 @@
 		<div>
 			<ul>
 				<li> 
-				 <input class="loRe" type="number" name="categoria" placeholder="categoria" id="categoria"/> 
+				  <select class="loRe">
+				    <option value="0">Seleciona la Categoria:</option>
+				    <option value="1">Joyeria</option>
+				    <option value="2">Artesania</option>
+				    <option value="3">Pintura</option>
+				  </select>
 				</li>
 				<li> 
 				 <input class="loRe" type="text" name="titulo" placeholder="titulo" id="titulo"/> 

@@ -62,6 +62,36 @@ function get_recent(cat_actual)
 	});
 }
 
+
+// -----home
+function get_recentHome()
+{
+	$.ajax({
+		type: "post",
+		dataType: "json",
+		url: url+"home/recent",
+		data: "pos="+pos_actual,
+
+		success: function(data){
+			pos_actual+=6;
+			if(data.length>0)
+			{
+				$(".cajaPeque").append(data);
+				$(".more").show();
+			}
+			else
+			{
+				$("p.nomore").html("No hay más resultados");
+			}
+			
+			$(".loading>img").hide();
+		},
+		error: function(e){
+
+		}
+	});
+}
+
 // -----Insertar
 
 

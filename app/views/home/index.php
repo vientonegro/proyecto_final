@@ -29,7 +29,12 @@
                         <div class="titulillo">
                         <h2>Lo más Popular</h2>
                         </div>
-                        <article class="cajaPeque">
+
+                        <div class="content">
+                            <?php echo $productos;?>
+                        </div>
+
+<!--                         <article class="cajaPeque">
                             <div class="cajaMini"></div>
                             <h3 class="prod">Producto</h3>
                         </article>
@@ -52,7 +57,7 @@
                         <article class="cajaPeque">
                             <div class="cajaMini"></div>
                             <h3 class="prod">Producto</h3>
-                        </article>
+                        </article> -->
                     </section>
                     <div style="clear: both;"></div>
                     <aside id="entrada">

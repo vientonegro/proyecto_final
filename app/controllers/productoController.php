@@ -11,6 +11,7 @@ class productoController extends Controller
     	$d['productos'] = $this->producto_structure(producto::get_recent(0,$cat));
     	$d['script'] = "index";
         // $d['title'] = $d["titulo"];
+  
         $this->set($d);
         $this->render('index');
     }
