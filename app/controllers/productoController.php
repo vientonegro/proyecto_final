@@ -50,9 +50,9 @@ class productoController extends Controller
     public function recent()
     {
     	$pos = $_POST["pos"];
-        $cat = $_POST["cat"];
+        // $cat = $_POST["cat"];
         
-    	$d = $this->producto_structure(producto::get_recent($pos,$cat));
+    	$d = $this->producto_structure(producto::get_recent($pos));
         
   		echo json_encode($d);
      

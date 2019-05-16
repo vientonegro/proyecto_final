@@ -22,11 +22,6 @@ class perfilController extends Controller
             $precio = Security::secure_input($_POST["precio"]);           
             $usuario = Security::secure_input($_POST["usuario"]);
 
-            // $directorio = getcwd().'BASE_DOMAIN_DIR_IMG';
-            // $foto_nueva = $directorio.$_FILES['user-img-file']['name'];
-            // $result =move_uploaded_file($_FILES["user-img-file"]["tmp_name"], $foto_nueva);
-
-            // $imagen = Security::secure_input($_FILES["user-img-file"]["name"]);
 
             $insertar = new perfil();
 

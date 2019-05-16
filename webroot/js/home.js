@@ -20,30 +20,38 @@
     	}
 	}
 
-var pos_actual = 0;
 
+
+var pos_actual = 3;
+var cat_actual =0;
 $(document).ready(function(){
 
 	$("span.more").on("click", function(){
-		var cat_actual = $( "button.more" ).data( "cat");
+		var cat_actual = $( "button.more" ).data( "cat" );
 		get_recent(cat_actual);
 	});
 
 });
 
-function get_recent(cat_actual)
+
+function get_recent()
 {
+	
 	$.ajax({
 		type: "post",
 		dataType: "json",
 		url: url+"producto/recent",
-		data: "pos="+pos_actual +"&cat="+cat_actual,
+		data: "pos="+pos_actual + "&cat="+cat_actual,
 		beforeSend: function(){
 			$(".loading>img").show();
 			$(".more").hide();
 		},
 		success: function(data){
-			pos_actual+=18;
+			
+			pos_actual+=3;
+			cat_actual+=0;
+			// alert(pos_actual);
+			// console.log(pos_actual);
 			if(data.length>0)
 			{
 				$(".content").append(data);
@@ -76,7 +84,7 @@ function get_recentHome()
 			pos_actual+=6;
 			if(data.length>0)
 			{
-				$(".cajaPeque").append(data);
+				$(".content").append(data);
 				$(".more").show();
 			}
 			else
@@ -216,7 +224,7 @@ $(document).ready(function(){
 	});
 	
 	$("#registrar").on("click", function(){
-console.log("Registrar");
+// console.log("Registrar");
 		msg = "";
 
 		if($("#usuarioR").val() == ""){

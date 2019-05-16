@@ -41,25 +41,59 @@ class perfil extends Model
 
 		}
     }
-    public function getIma()
-    {
-		$directorio = getcwd().'/img/';
-		$foto_nueva = $directorio.$_FILES['user-img-file']['name'];
-		// exit();
-		// print_r($foto_nueva);
-		$result =move_uploaded_file($_FILES["user-img-file"]["tmp_name"], $foto_nueva);
-		// print_r($result);
+	public function insertImage($file, $imageName, $maxImageSize, $UrlFileServer, $usuarios_usuario) 
+	{
 
+		$fileTmpPath = $file['tmp_name'];
+	    $fileName = $file['name'];
+	    $fileSize = $file['size'];
+	    $fileType = $file['type'];
+	    $fileNameCmps = explode(".", $fileName);
+	    $fileExtension = strtolower(end($fileNameCmps));
+	    $newFileName = $imageName . '.' . $fileExtension;
+	    $allowedfileExtensions = array('jpg', 'jpeg', 'gif', 'png');
+	    $imageDbURL = $UrlFileServer . '/' . $usuarios_usuario . '/' . $newFileName;
 
-		$img = $_FILES["user-img-file"]["name"];
+	    if($fileSize > $maxImageSize) {
 
-		//guardar el formulario sesion, para poder ver los datos
-		$_SESSION['nombre'] = $_POST['nombre'];
-		$_SESSION['foto'] = "/examen/img/".$_FILES['user-img-file']['name'];
-		$_SESSION['descripcion'] = $_POST['descripcion'];
-		perfil::setfile($img);
-		
-    }		
+	        return array('El tamaño de la imagen excede de 2MB. No se ha insertado la imagen...', false);
 
+	    } else if(!in_array($fileExtension, $allowedfileExtensions)) {
 
+	        return array('La extensión de la imagen tiene que ser de este tipo: (jpg, jpeg, gif, png). No se ha insertado la imagen...', false);
+
+	    }
+	     else 
+	    {
+
+	        $dirPath = realpath(dirname(getcwd()));
+	        $dirPath = $dirPath . '/' . $UrlFileServer . '/' . $usuarios_usuario;
+	        if(!is_dir($dirPath)) mkdir($dirPath, 0755, true);
+	        $destPath = $dirPath . '/' . $newFileName;
+	        $files = glob($dirPath . '/*'); 
+	        foreach($files as $file)
+	        {
+	            if(is_file($file))
+	            {
+	            	unlink($file);
+	            }
+	             
+	        }
+
+	        if(move_uploaded_file($fileTmpPath, $destPath)) 
+	        {
+
+	            return array('Imagen insertada correctamente...', true, $newFileName);
+
+	        } 
+	        else 
+	        {
+
+	            return array('Ha ocurrido un problema con la carga de la imagen. Inténtalo más tarde...', false);
+
+	        }
+
+	    }
+
+	}
 }

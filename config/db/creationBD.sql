@@ -82,13 +82,22 @@ INSERT INTO `CreationModel`.`productos` (`idproductos`, `categoria`, `titulo`, `
 INSERT INTO `CreationModel`.`productos` (`idproductos`, `categoria`, `titulo`, `imagen`, `descripcion`, `precio`, `usuarios_usuario`) VALUES (DEFAULT, 1, 'anillo', 'joyeria.jpg', 'el anillo para condenarlos a todos', 9000000, 'viento');
 INSERT INTO `CreationModel`.`productos` (`idproductos`, `categoria`, `titulo`, `imagen`, `descripcion`, `precio`, `usuarios_usuario`) VALUES (DEFAULT, 2, 'artesania', 'hea.jpg', 'los mejores alfareros desde la tierra media', 20000, 'naruto');
 INSERT INTO `CreationModel`.`productos` (`idproductos`, `categoria`, `titulo`, `imagen`, `descripcion`, `precio`, `usuarios_usuario`) VALUES (DEFAULT, 3, 'pintura', 'pintura.jpg', 'el ojo que todo lo ve de Mordor', 700000, 'viento');
+INSERT INTO `CreationModel`.`productos` (`idproductos`, `categoria`, `titulo`, `imagen`, `descripcion`, `precio`, `usuarios_usuario`) VALUES (DEFAULT, 1, 'anillo', 'joyeria2.jpg', 'el anillo para condenarlos a todos', 9000000, 'viento');
+INSERT INTO `CreationModel`.`productos` (`idproductos`, `categoria`, `titulo`, `imagen`, `descripcion`, `precio`, `usuarios_usuario`) VALUES (DEFAULT, 2, 'artesania', 'artesania.jpg', 'los mejores alfareros desde la tierra media', 20000, 'naruto');
+INSERT INTO `CreationModel`.`productos` (`idproductos`, `categoria`, `titulo`, `imagen`, `descripcion`, `precio`, `usuarios_usuario`) VALUES (DEFAULT, 3, 'pintura', '1.jpg', 'el ojo que todo lo ve de Mordor', 700000, 'viento');
+INSERT INTO `CreationModel`.`productos` (`idproductos`, `categoria`, `titulo`, `imagen`, `descripcion`, `precio`, `usuarios_usuario`) VALUES (DEFAULT, 1, 'anillo', '13.jpg', 'el anillo para condenarlos a todos', 9000000, 'viento');
+INSERT INTO `CreationModel`.`productos` (`idproductos`, `categoria`, `titulo`, `imagen`, `descripcion`, `precio`, `usuarios_usuario`) VALUES (DEFAULT, 2, 'artesania', '6.jpg', 'los mejores alfareros desde la tierra media', 20000, 'naruto');
+INSERT INTO `CreationModel`.`productos` (`idproductos`, `categoria`, `titulo`, `imagen`, `descripcion`, `precio`, `usuarios_usuario`) VALUES (DEFAULT, 3, 'pintura', '3.jpg', 'el ojo que todo lo ve de Mordor', 700000, 'viento');
+INSERT INTO `CreationModel`.`productos` (`idproductos`, `categoria`, `titulo`, `imagen`, `descripcion`, `precio`, `usuarios_usuario`) VALUES (DEFAULT, 1, 'anillo', 'joyeria.jpg', 'el anillo para condenarlos a todos', 9000000, 'viento');
+INSERT INTO `CreationModel`.`productos` (`idproductos`, `categoria`, `titulo`, `imagen`, `descripcion`, `precio`, `usuarios_usuario`) VALUES (DEFAULT, 2, 'artesania', 'hea.jpg', 'los mejores alfareros desde la tierra media', 20000, 'naruto');
+INSERT INTO `CreationModel`.`productos` (`idproductos`, `categoria`, `titulo`, `imagen`, `descripcion`, `precio`, `usuarios_usuario`) VALUES (DEFAULT, 3, 'pintura', 'pintura.jpg', 'el ojo que todo lo ve de Mordor', 700000, 'viento');
 COMMIT;
 
 
 
 
 
-
+SELECT * from productos ORDER BY `idproductos`  LIMIT 0, 3; 
 select * from productos where categoria =1 ORDER BY `idproductos` DESC LIMIT 2;
 select * from usuarios;
 select * from productos;

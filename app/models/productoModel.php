@@ -11,7 +11,7 @@ class producto extends Model
 	private $usuarios_usuario;
 	static $table = "productos";
 
-		static public function get_recent($pos,$cat=null)
+		static public function get_recent($pos, $cat=null)
 		{	
 			$connect = Model::getInstanceDB();
 			$filtro = "";
@@ -19,7 +19,8 @@ class producto extends Model
 			{
 				$filtro = " where categoria = $cat";
 			}
-			$sql = ("SELECT * from ".self::$table." " .$filtro. " ORDER BY `idproductos` LIMIT $pos, 3");			
+			$sql = (" SELECT * from " .self::$table. " " .$filtro. "  ORDER BY `idproductos` LIMIT $pos, 3");	
+			// var_dump($sql);		
 			$stmt = $connect->prepare($sql);
 			$stmt->execute();
 			$productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
