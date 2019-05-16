@@ -5,9 +5,8 @@
 		<div>
 			<ul>
 				<li> 
-				  <select class="loRe categoria">
-				    <option value="0">Seleciona la Categoria:</option>
-				    <option value="1">Joyeria</option>
+				  <select class="loRe" id="categoria" name="categoria">
+				    <option value="1" selected="selected">Joyeria</option>
 				    <option value="2">Artesania</option>
 				    <option value="3">Pintura</option>
 				  </select>

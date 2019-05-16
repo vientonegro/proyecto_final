@@ -23,18 +23,19 @@
 
 
 var pos_actual = 3;
-var cat_actual =0;
+
 $(document).ready(function(){
 
 	$("span.more").on("click", function(){
-		var cat_actual = $( "button.more" ).data( "cat" );
+		var cat_actual = $( this ).data( "cat" );
+		console.log(cat_actual);
 		get_recent(cat_actual);
 	});
 
 });
 
 
-function get_recent()
+function get_recent(cat_actual)
 {
 	
 	$.ajax({
@@ -127,7 +128,7 @@ $(document).ready(function(){
 		msg = "";
 		
 		if($("#categoria").val()=="")
-		{	msg += "La categoria del Artículo está vacía <br>";
+		{	msg += "Escoge una categoria  <br>";
 			$("#categoria").css("border", "solid 1px red");
 			flag = false;
 		}
@@ -136,7 +137,7 @@ $(document).ready(function(){
 			$("#categoria").css("border", "solid 1px green");
 		}
 		if($("#titulo").val()=="")
-		{	msg += "El titulo del Artículo está vacío <br>";
+		{	msg += "Introduce un titulo  <br>";
 			$("#titulo").css("border", "solid 1px red");
 			flag = false;
 		}
@@ -267,7 +268,7 @@ $(document).ready(function(){
   					//No esta redireccionando mirar
   					if(data == "Registro correcto")
   					{
-  						setTimeout(function(){ location.href="home/index" }, 0);
+  						location.href="home/index";
 
   					}
   				},
@@ -318,7 +319,7 @@ $(document).ready(function(){
   					$("#errorsL").html(data);
   					if(data == "Login correcto")
   					{
-  						setTimeout(function(){ location.href="home/index" }, 0);
+  						location.href="home/index";
   					}
   					
   				},

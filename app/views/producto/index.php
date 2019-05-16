@@ -21,5 +21,5 @@
 <div class="loading">
 	<img src="<?php echo BASE_DOMAIN_DIR_URL;?>/webroot/img/loader.gif">
 </div>
-<span class="more" data-cat="1">Ver más</span>
+<span class="more" data-cat="<?php echo $cat;?>">Ver más</span>
 <p class="nomore"></p>

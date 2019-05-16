@@ -21,13 +21,13 @@ class perfil extends Model
 		$connect = Model::getInstanceDB();
 		//Gestión de la inserción del dato
 		
-		$sql = "INSERT INTO usuarios (`categoria`, `titulo`, `imagen`,`descripcion`, `precio`, `usuarios_usuario`) VALUES (:categoria, :titulo, :imagen, :descripcion, :precio, :usuarios_usuario)";
+		$sql = "INSERT INTO productos (`categoria`, `titulo`, `imagen`,`descripcion`, `precio`, `usuarios_usuario`) VALUES (:categoria, :titulo, :imagen, :descripcion, :precio, :usuarios_usuario)";
 		$stmt = $connect->prepare($sql);
 		$stmt->bindParam(':categoria', $categoria);		
 		$stmt->bindParam(':titulo', $titulo);
 		$stmt->bindParam(':imagen', $imagen);
 		$stmt->bindParam(':descripcion', $descripcion);		
-		$stmt->bindParam(':email', $email);
+		$stmt->bindParam(':precio', $precio);
 		$stmt->bindParam(':usuarios_usuario', $usuarios_usuario);
 
 		//si se ejecuta correctamente el INSERT, retorno al controlador el mensaje de OK
@@ -41,59 +41,59 @@ class perfil extends Model
 
 		}
     }
-	public function insertImage($file, $imageName, $maxImageSize, $UrlFileServer, $usuarios_usuario) 
-	{
+	// public function insertImage($file, $imageName, $maxImageSize, $UrlFileServer, $usuarios_usuario) 
+	// {
 
-		$fileTmpPath = $file['tmp_name'];
-	    $fileName = $file['name'];
-	    $fileSize = $file['size'];
-	    $fileType = $file['type'];
-	    $fileNameCmps = explode(".", $fileName);
-	    $fileExtension = strtolower(end($fileNameCmps));
-	    $newFileName = $imageName . '.' . $fileExtension;
-	    $allowedfileExtensions = array('jpg', 'jpeg', 'gif', 'png');
-	    $imageDbURL = $UrlFileServer . '/' . $usuarios_usuario . '/' . $newFileName;
+	// 	$fileTmpPath = $file['tmp_name'];
+	//     $fileName = $file['name'];
+	//     $fileSize = $file['size'];
+	//     $fileType = $file['type'];
+	//     $fileNameCmps = explode(".", $fileName);
+	//     $fileExtension = strtolower(end($fileNameCmps));
+	//     $newFileName = $imageName . '.' . $fileExtension;
+	//     $allowedfileExtensions = array('jpg', 'jpeg', 'gif', 'png');
+	//     $imageDbURL = $UrlFileServer . '/' . $usuarios_usuario . '/' . $newFileName;
 
-	    if($fileSize > $maxImageSize) {
+	//     if($fileSize > $maxImageSize) {
 
-	        return array('El tamaño de la imagen excede de 2MB. No se ha insertado la imagen...', false);
+	//         return array('El tamaño de la imagen excede de 2MB. No se ha insertado la imagen...', false);
 
-	    } else if(!in_array($fileExtension, $allowedfileExtensions)) {
+	//     } else if(!in_array($fileExtension, $allowedfileExtensions)) {
 
-	        return array('La extensión de la imagen tiene que ser de este tipo: (jpg, jpeg, gif, png). No se ha insertado la imagen...', false);
+	//         return array('La extensión de la imagen tiene que ser de este tipo: (jpg, jpeg, gif, png). No se ha insertado la imagen...', false);
 
-	    }
-	     else 
-	    {
+	//     }
+	//      else 
+	//     {
 
-	        $dirPath = realpath(dirname(getcwd()));
-	        $dirPath = $dirPath . '/' . $UrlFileServer . '/' . $usuarios_usuario;
-	        if(!is_dir($dirPath)) mkdir($dirPath, 0755, true);
-	        $destPath = $dirPath . '/' . $newFileName;
-	        $files = glob($dirPath . '/*'); 
-	        foreach($files as $file)
-	        {
-	            if(is_file($file))
-	            {
-	            	unlink($file);
-	            }
+	//         $dirPath = realpath(dirname(getcwd()));
+	//         $dirPath = $dirPath . '/' . $UrlFileServer . '/' . $usuarios_usuario;
+	//         if(!is_dir($dirPath)) mkdir($dirPath, 0755, true);
+	//         $destPath = $dirPath . '/' . $newFileName;
+	//         $files = glob($dirPath . '/*'); 
+	//         foreach($files as $file)
+	//         {
+	//             if(is_file($file))
+	//             {
+	//             	unlink($file);
+	//             }
 	             
-	        }
+	//         }
 
-	        if(move_uploaded_file($fileTmpPath, $destPath)) 
-	        {
+	//         if(move_uploaded_file($fileTmpPath, $destPath)) 
+	//         {
 
-	            return array('Imagen insertada correctamente...', true, $newFileName);
+	//             return array('Imagen insertada correctamente...', true, $newFileName);
 
-	        } 
-	        else 
-	        {
+	//         } 
+	//         else 
+	//         {
 
-	            return array('Ha ocurrido un problema con la carga de la imagen. Inténtalo más tarde...', false);
+	//             return array('Ha ocurrido un problema con la carga de la imagen. Inténtalo más tarde...', false);
 
-	        }
+	//         }
 
-	    }
+	//     }
 
-	}
+	// }
 }

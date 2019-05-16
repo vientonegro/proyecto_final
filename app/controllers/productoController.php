@@ -8,10 +8,15 @@ class productoController extends Controller
     //PHP VIEW
     public function index($cat=0)
     {   
-    	$d['productos'] = $this->producto_structure(producto::get_recent(0,$cat));
+        $segments = explode('/', trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/'));
+        // cogemos el tercer fragmento
+        $order = isset($segments[3]) ? $segments[3] : '';
+
+    	$d['productos'] = $this->producto_structure(producto::get_recent(0,$cat,$order));
     	$d['script'] = "index";
         // $d['title'] = $d["titulo"];
-  
+        $d['cat'] = $cat;
+
         $this->set($d);
         $this->render('index');
     }
@@ -27,6 +32,7 @@ class productoController extends Controller
     {   
          $this->index(3);
     }
+    //crear variable tipo if para el data vaya variando
 
     private function producto_structure($producto_array)
     {
@@ -50,9 +56,9 @@ class productoController extends Controller
     public function recent()
     {
     	$pos = $_POST["pos"];
-        // $cat = $_POST["cat"];
+        $cat = $_POST["cat"];
         
-    	$d = $this->producto_structure(producto::get_recent($pos));
+    	$d = $this->producto_structure(producto::get_recent($pos,$cat));
         
   		echo json_encode($d);
      

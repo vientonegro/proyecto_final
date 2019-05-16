@@ -11,7 +11,7 @@ class producto extends Model
 	private $usuarios_usuario;
 	static $table = "productos";
 
-		static public function get_recent($pos, $cat=null)
+		static public function get_recent($pos, $cat=null,$order=null)
 		{	
 			$connect = Model::getInstanceDB();
 			$filtro = "";
@@ -19,7 +19,20 @@ class producto extends Model
 			{
 				$filtro = " where categoria = $cat";
 			}
-			$sql = (" SELECT * from " .self::$table. " " .$filtro. "  ORDER BY `idproductos` LIMIT $pos, 3");	
+			switch($order)
+			{
+				case 1:
+
+				$orderBY = "`precio` asc" ;
+				break;
+				case 2:
+
+				$orderBY = "`precio` desc" ;
+				break;
+				default:
+				$orderBY = "`idproductos`" ;
+			}
+			$sql = (" SELECT * from " .self::$table. " " .$filtro. "  ORDER BY ".$orderBY."  LIMIT $pos, 3");	
 			// var_dump($sql);		
 			$stmt = $connect->prepare($sql);
 			$stmt->execute();
@@ -32,41 +45,6 @@ class producto extends Model
 			
 			return $productos;
 		}
-
-		// public function ordernar($ord)
-		// {
-		// 	$connect = Model::getInstanceDB();
-		// 	if($ord ==1)
-		// 	{
-		// 		$sql = ("SELECT * from ".self::$table. " where categoria ORDER BY `idproductos` DESC LIMIT $pos, 6");
-		// 	}if else ($ord ==2)
-		// 	{
-		// 		$sql = ("SELECT * from ".self::$table." " .$filtro. " where categoria ORDER BY `idproductos`  LIMIT $pos, 6");
-		// 	}if else ($ord ==3)
-		// 	{
-		// 		$sql = ("SELECT * from ".self::$table." " .$filtro. " ORDER BY `usuarios_usuario`  LIMIT $pos, 6");
-		// 	}
-		// 	if else ($ord ==4)
-		// 	{
-		// 		$sql = ("SELECT * from ".self::$table." " .$filtro. " ORDER BY `precio` LIMIT $pos, 6");
-		// 	}
-		// 	if else ($ord ==5)
-		// 	{
-		// 		$sql = ("SELECT * from ".self::$table." " .$filtro. " ORDER BY `precio` DESC LIMIT $pos, 6");
-		// 	}
-					
-		// 	$stmt = $connect->prepare($sql);
-		// 	$stmt->execute();
-		// 	$productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-		// 	for($i=0; $i<count($productos); $i++)
-		// 	{
-		// 		$productos[$i]["descripcion"] = utf8_encode(self::getSubString($productos[$i]["descripcion"]));
-		// 	}
-			
-		// 	return $productos;
-
-		// }
 
 
 		static public function getById($idproductos)
