@@ -63,13 +63,6 @@ class productoController extends Controller
   		echo json_encode($d);
      
     }
-    //ORDENAR
-
-    
-
-
-
-
 
     public function clean($string) 
     {

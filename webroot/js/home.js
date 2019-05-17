@@ -85,8 +85,6 @@ function get_recent(cat_actual)
 			
 			pos_actual+=3;
 			cat_actual+=0;
-			// alert(pos_actual);
-			// console.log(pos_actual);
 			if(data.length>0)
 			{
 				$(".content").append(data);

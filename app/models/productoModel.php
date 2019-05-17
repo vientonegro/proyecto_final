@@ -18,37 +18,38 @@ class producto extends Model
 			if($cat)
 			{
 				$filtro = " where categoria = $cat";
-			}
-			switch($order)
-			{
-				case 1:
+			
+				switch($order)
+				{
+					case 1:
 
-				$orderBY = "`idproductos` asc" ;
-				break;
+					$orderBY = "`idproductos` asc" ;
+					break;
 
-				case 2:
+					case 2:
 
-				$orderBY = "`usuarios_usuario` asc" ;
-				break;
+					$orderBY = "`usuarios_usuario` asc" ;
+					break;
 
-				case 3:
+					case 3:
 
-				$orderBY = "`usuarios_usuario` asc" ;
-				break;
+					$orderBY = "`usuarios_usuario` asc" ;
+					break;
 
-				case 4:
+					case 4:
 
-				$orderBY = "`precio` asc" ;
-				break;
+					$orderBY = "`precio` asc" ;
+					break;
 
-				case 5:
+					case 5:
 
-				$orderBY = "`precio` desc" ;
-				break;
+					$orderBY = "`precio` desc" ;
+					break;
 
-				default:
+					default:
 
-				$orderBY = "`idproductos` DESC" ;
+					$orderBY = "`idproductos` DESC" ;
+				}
 			}
 			$sql = (" SELECT * from " .self::$table. " " .$filtro. "  ORDER BY ".$orderBY."  LIMIT $pos, 3");	
 			// var_dump($sql);		
