@@ -19,9 +19,43 @@
         document.getElementById("buscar").style.transform = "translateX(100%)";
     	}
 	}
+//Ordenar categorias
+
+$(document).ready(function(){
+
+	$("#ord").on("change", function(){
+
+		if($("#ord").val()=="1")
+		{
+			location.href="producto/joyeria/2";
+		}
+		if($("#ord").val()=="2")
+		{
+			location.href="producto/joyeria/3";
+		}
+		if($("#ord").val()=="3")
+		{
+			location.href="producto/joyeria/4";
+		}
+		if($("#ord").val()=="4")
+		{
+			location.href="producto/joyeria/5";
+		}
+		if($("#ord").val()=="5")
+		{
+			location.href="producto/joyeria/2";
+		}
+		if($("#ord").val()=="6")
+		{
+			location.href="producto/joyeria";
+		}
+
+	});
+
+});
 
 
-
+//Categoria
 var pos_actual = 3;
 
 $(document).ready(function(){

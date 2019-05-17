@@ -23,14 +23,32 @@ class producto extends Model
 			{
 				case 1:
 
+				$orderBY = "`idproductos` asc" ;
+				break;
+
+				case 2:
+
+				$orderBY = "`usuarios_usuario` asc" ;
+				break;
+
+				case 3:
+
+				$orderBY = "`usuarios_usuario` asc" ;
+				break;
+
+				case 4:
+
 				$orderBY = "`precio` asc" ;
 				break;
-				case 2:
+
+				case 5:
 
 				$orderBY = "`precio` desc" ;
 				break;
+
 				default:
-				$orderBY = "`idproductos`" ;
+
+				$orderBY = "`idproductos` DESC" ;
 			}
 			$sql = (" SELECT * from " .self::$table. " " .$filtro. "  ORDER BY ".$orderBY."  LIMIT $pos, 3");	
 			// var_dump($sql);		
