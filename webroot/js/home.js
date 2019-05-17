@@ -43,7 +43,7 @@ $(document).ready(function(){
 		}
 		if($("#ord").val()=="5")
 		{
-			location.href="producto/joyeria/2";
+			location.href="producto/joyeria/1";
 		}
 		if($("#ord").val()=="6")
 		{
@@ -56,7 +56,7 @@ $(document).ready(function(){
 
 
 //Categoria
-var pos_actual = 3;
+var pos_actual = 0;
 
 $(document).ready(function(){
 
@@ -235,7 +235,8 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-	$("#registro span").click(function(){
+	$("#registro span").click(function()
+	{
 		$("#errorsR").html("");
 		$("#errorsL").html("");
 		$("input[type=text]").val("");
@@ -246,7 +247,8 @@ $(document).ready(function(){
 		$("#registro").css("display","none");
 		
 	});	
-	$("#login span").click(function(){
+	$("#login span").click(function()
+	{
 		$("#errorsR").html("");
 		$("#errorsL").html("");
 		$("input[type=text]").val("");
@@ -258,7 +260,8 @@ $(document).ready(function(){
 		$("#registro").css("display","block");
 	});
 	
-	$("#registrar").on("click", function(){
+	$("#registrar").on("click", function()
+	{
 // console.log("Registrar");
 		msg = "";
 
@@ -283,7 +286,8 @@ $(document).ready(function(){
 
   		$("#errorsR").html(msg);
 
-  		if(msg == ""){
+  		if(msg == "")
+  		{
   			
   			$.ajax({
 
@@ -300,9 +304,9 @@ $(document).ready(function(){
   					$("#errorsR").html(data);
 
   					//No esta redireccionando mirar
-  					if(data == "Registro correcto")
+  					if(data == 'Registo correcto')
   					{
-  						location.href="home/index";
+  						location.href="login/index";
 
   					}
   				},
