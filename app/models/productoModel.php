@@ -11,7 +11,7 @@ class producto extends Model
 	private $usuarios_usuario;
 	static $table = "productos";
 
-		static public function get_recent($pos, $cat=null,$order=null)
+		static public function get_recent($pos, $cat=null,$ord=null)
 		{	
 			$connect = Model::getInstanceDB();
 			$filtro = "";
@@ -19,7 +19,7 @@ class producto extends Model
 			{
 				$filtro = " where categoria = $cat";
 			
-				switch($order)
+				switch($ord)
 				{
 					case 1:
 

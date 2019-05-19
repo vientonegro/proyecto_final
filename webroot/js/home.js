@@ -19,40 +19,7 @@
         document.getElementById("buscar").style.transform = "translateX(100%)";
     	}
 	}
-//Ordenar categorias
 
-$(document).ready(function(){
-
-	$("#ord").on("change", function(){
-
-		if($("#ord").val()=="1")
-		{
-			location.href="producto/joyeria/2";
-		}
-		if($("#ord").val()=="2")
-		{
-			location.href="producto/joyeria/3";
-		}
-		if($("#ord").val()=="3")
-		{
-			location.href="producto/joyeria/4";
-		}
-		if($("#ord").val()=="4")
-		{
-			location.href="producto/joyeria/5";
-		}
-		if($("#ord").val()=="5")
-		{
-			location.href="producto/joyeria/1";
-		}
-		if($("#ord").val()=="6")
-		{
-			location.href="producto/joyeria";
-		}
-
-	});
-
-});
 
 
 //Categoria
@@ -102,7 +69,122 @@ function get_recent(cat_actual)
 		}
 	});
 }
+//Ordenar categorias
+// var URLactual = window.location.href;
 
+var URLactual = jQuery(location).attr('href');
+$(document).ready(function(){
+		
+	$("#ord").on("change", function()
+	{		
+		if($("#ord").val()=="1" && location.href==URLactual)
+		{	
+			if(location.href=="location.href=URLactual")
+			{
+				location.href=URLactual+"/2";
+			}					
+			else if((location.href=="location.href=URLactual"))
+			{
+				location.href=URLactual+"/2";
+			}
+			else
+			{
+				location.href=URLactual+"/2";
+			}
+
+		}
+		
+		else if($("#ord").val()=="2" && location.href==URLactual)
+		{
+					
+			if(location.href=="location.href=URLactual")
+			{
+				location.href=URLactual+"/3";
+			}					
+			else if((location.href=="location.href=URLactual"))
+			{
+				location.href=URLactual+"/3";
+			}
+			else
+			{
+				location.href=URLactual+"/3";
+			}
+
+		}
+		else if($("#ord").val()=="3" && location.href==URLactual)
+		{
+					
+			if(location.href=="location.href=URLactual")
+			{
+				location.href=URLactual+"/4";
+			}					
+			else if((location.href=="location.href=URLactual"))
+			{
+				location.href=URLactual+"/4";
+			}
+			else
+			{
+				location.href=URLactual+"/4";
+			}
+
+		}
+		else if($("#ord").val()=="4" && location.href==URLactual)
+		{
+					
+			if(location.href=="location.href=URLactual")
+			{
+				location.href=URLactual+"/5";
+			}					
+			else if((location.href=="location.href=URLactual"))
+			{
+				location.href=URLactual+"/5";
+			}
+			else
+			{
+				location.href=URLactual+"/5";
+			}
+
+		}
+		else if($("#ord").val()=="5" && location.href==URLactual)
+		{
+					
+			if(location.href=="location.href=URLactual")
+			{
+				location.href=URLactual+"/6";
+			}					
+			else if((location.href=="location.href=URLactual"))
+			{
+				location.href=URLactual+"/6";
+			}
+			else
+			{
+				location.href=URLactual+"/6";
+			}
+
+		}
+		else if($("#ord").val()=="6" && location.href==URLactual)
+		{
+					
+			if(location.href=="location.href=URLactual")
+			{
+				location.href=URLactual;
+			}					
+			else if((location.href=="location.href=URLactual"))
+			{
+				location.href=URLactual;
+			}
+			else
+			{
+				location.href=URLactual;
+			}
+
+		}
+
+
+
+	});
+
+});
 
 // -----home
 function get_recentHome()
@@ -260,7 +342,6 @@ $(document).ready(function(){
 	
 	$("#registrar").on("click", function()
 	{
-// console.log("Registrar");
 		msg = "";
 
 		if($("#usuarioR").val() == ""){
@@ -301,7 +382,6 @@ $(document).ready(function(){
   				success: function(data){
   					$("#errorsR").html(data);
 
-  					//No esta redireccionando mirar
   					if(data == 'Registo correcto')
   					{
   						location.href="login/index";
@@ -341,7 +421,7 @@ $(document).ready(function(){
   		if(msg == ""){
 
   			$.ajax({
-  					// cambiar url
+  					
   				type: 'post',
   				url: 'login/usuario',
   				data: $("#login").serialize(),

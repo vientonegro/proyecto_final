@@ -10,9 +10,9 @@ class productoController extends Controller
     {   
         $segments = explode('/', trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/'));
         // cogemos el tercer fragmento
-        $order = isset($segments[3]) ? $segments[3] : '';
+        $ord = isset($segments[3]) ? $segments[3] : '';
 
-    	$d['productos'] = $this->producto_structure(producto::get_recent(0,$cat,$order));
+    	$d['productos'] = $this->producto_structure(producto::get_recent(0,$cat,$ord));
     	$d['script'] = "index";
         // $d['title'] = $d["titulo"];
         $d['cat'] = $cat;
