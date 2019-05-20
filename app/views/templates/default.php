@@ -13,6 +13,7 @@
         <script type="text/javascript" src="webroot/js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="webroot/js/home.js"></script>
         <script type="text/javascript" src="webroot/js/contacto.js"></script>
+        <script type="text/javascript" src="webroot/js/search.js"></script>
         <link rel="stylesheet" type="text/css" href="webroot/css/contacto.css">
         <link rel="stylesheet" type="text/css" href="webroot/css/dinamic.css">
         <link rel="stylesheet" type="text/css" href="webroot/css/detalle.css">   

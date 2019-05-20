@@ -72,116 +72,14 @@ function get_recent(cat_actual)
 //Ordenar categorias
 // var URLactual = window.location.href;
 
-var URLactual = jQuery(location).attr('href');
+// var URLactual = jQuery(location).attr('href');
 $(document).ready(function(){
 		
 	$("#ord").on("change", function()
-	{		
-		if($("#ord").val()=="1" && location.href==URLactual)
-		{	
-			if(location.href=="location.href=URLactual")
-			{
-				location.href=URLactual+"/2";
-			}					
-			else if((location.href=="location.href=URLactual"))
-			{
-				location.href=URLactual+"/2";
-			}
-			else
-			{
-				location.href=URLactual+"/2";
-			}
-
-		}
-		
-		else if($("#ord").val()=="2" && location.href==URLactual)
-		{
-					
-			if(location.href=="location.href=URLactual")
-			{
-				location.href=URLactual+"/3";
-			}					
-			else if((location.href=="location.href=URLactual"))
-			{
-				location.href=URLactual+"/3";
-			}
-			else
-			{
-				location.href=URLactual+"/3";
-			}
-
-		}
-		else if($("#ord").val()=="3" && location.href==URLactual)
-		{
-					
-			if(location.href=="location.href=URLactual")
-			{
-				location.href=URLactual+"/4";
-			}					
-			else if((location.href=="location.href=URLactual"))
-			{
-				location.href=URLactual+"/4";
-			}
-			else
-			{
-				location.href=URLactual+"/4";
-			}
-
-		}
-		else if($("#ord").val()=="4" && location.href==URLactual)
-		{
-					
-			if(location.href=="location.href=URLactual")
-			{
-				location.href=URLactual+"/5";
-			}					
-			else if((location.href=="location.href=URLactual"))
-			{
-				location.href=URLactual+"/5";
-			}
-			else
-			{
-				location.href=URLactual+"/5";
-			}
-
-		}
-		else if($("#ord").val()=="5" && location.href==URLactual)
-		{
-					
-			if(location.href=="location.href=URLactual")
-			{
-				location.href=URLactual+"/6";
-			}					
-			else if((location.href=="location.href=URLactual"))
-			{
-				location.href=URLactual+"/6";
-			}
-			else
-			{
-				location.href=URLactual+"/6";
-			}
-
-		}
-		else if($("#ord").val()=="6" && location.href==URLactual)
-		{
-					
-			if(location.href=="location.href=URLactual")
-			{
-				location.href=URLactual;
-			}					
-			else if((location.href=="location.href=URLactual"))
-			{
-				location.href=URLactual;
-			}
-			else
-			{
-				location.href=URLactual;
-			}
-
-		}
-
-
-
+	{	
+		var type = $(this).val();
+		var cat = $(this).attr("data-cat-select");
+		order(type, cat);
 	});
 
 });
@@ -231,7 +129,24 @@ function get_recentHome()
 		        reader.readAsDataURL(input.files[0]);
 		    }
 		}
-	
+
+
+		function order(type, cat)
+		{
+			$.ajax({
+			type: "post",
+			dataType: "json",
+			url: url+"producto/ordenar",
+			data: "type="+type+"&cat="+cat,
+
+			success: function(data){
+				$(".content").html(data);
+			},
+			error: function(e){
+
+			}
+		});
+		}
 	
 $(document).ready(function(){
 

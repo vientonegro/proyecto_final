@@ -5,7 +5,7 @@
     
 </script>
 <form class="ordenar" method="POST" id="ordenar" action="producto/index">
-	<select class="ordenar" name="ord" id="ord">
+	<select class="ordenar" name="ord" id="ord" data-cat-select="<?php echo $cat;?>">
 		 <option value="0">Ordenar por:</option>
 		 <option value="1">Artistas [A-Z]</option>
 		 <option value="2">Artistas [Z-A]</option>

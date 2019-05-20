@@ -83,5 +83,13 @@ class productoController extends Controller
        
     }
 
+    public function ordenar()
+    {
+        $type = $_POST["type"];
+        $cat = $_POST["cat"];
+        $productos = $this->producto_structure(producto::get_recent(0,$cat,$type));
+        echo json_encode($productos);
+    }
+
 
 }
