@@ -1,4 +1,5 @@
-$(document).ready(function(){
+$(document).ready(function()
+{
 
 	$("#lupa").on("keypress", function(e)
 	{
@@ -18,17 +19,7 @@ $(document).ready(function(){
 
 				data: "dato="+dato,
 
-				success: function(data){
-					var divContent = "";
-					for(var i = 0; i<data.length; i++)
-					{
-						divContent+='<div>';
-							divContent+='<p>'+data[i]["usuarios_usuario"]+'</p>';
-							divContent+='<p>'+data[i]["titulo"]+'</p>';
-						divContent+='</div>';
-					}
-					$("main").html(divContent)="";
-				},
+
 				error: function(e){
 
 				}

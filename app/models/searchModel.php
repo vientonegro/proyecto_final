@@ -15,7 +15,7 @@ class search extends Model {
 
         //Buscador
 
-        static public function getdat($dato)
+        static public function getdat($pos,$dato)
         {
 
             $db = Model::getInstanceDB();
@@ -23,7 +23,29 @@ class search extends Model {
             $stmt->execute();
             $productos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+            for($i=0; $i<count($productos); $i++)
+            {
+                $productos[$i]["descripcion"] = utf8_encode(self::getSubString($productos[$i]["descripcion"]));
+            }
             return $productos;
+        }
+        static public function getById($idproductos)
+        {
+            $connect = Model::getInstanceDB();
+            $stmt = $connect->prepare("SELECT * from ".self::$table." WHERE idproductos=$idproductos");
+            $stmt->execute();
+            $producto = $stmt->fetch(PDO::FETCH_ASSOC);
+            $producto["descripcion"] = utf8_encode($producto["descripcion"]);
+
+            return $producto;
+        }   
+        public function getSubString($string)
+        {
+            $length = 400;
+            $stringDisplay = substr(strip_tags($string), 0, $length);
+            if (strlen(strip_tags($string)) > $length)
+                $stringDisplay .= ' ...';
+            return $stringDisplay;
         }
 
 }

@@ -29,7 +29,7 @@ $(document).ready(function(){
 
 	$("span.more").on("click", function(){
 		var cat_actual = $( this ).data( "cat" );
-		console.log(cat_actual);
+		// console.log(cat_actual);
 		get_recent(cat_actual);
 	});
 
@@ -112,7 +112,48 @@ function get_recentHome()
 		}
 	});
 }
+//buscar
+$(document).ready(function(){
 
+	$("#buscar").on("keypress", function(e)
+	{
+		if(e.which == 13) 
+		{
+
+			var dato = JSON.stringify($("#buscar").val());
+			// coge el dato de la funcion
+			console.log(dato);
+    	}
+	});
+
+function getdat()
+{
+	$.ajax({
+		type: "post",
+		dataType: "json",
+		url: url+"search/recent",
+		data: "pos="+pos_actual+"$dato="+dato,
+		
+		success: function(data){
+			pos_actual+=6;
+			if(data.length>0)
+			{
+				$(".content").append(data);
+				$(".more").show();
+			}
+			else
+			{
+				$("p.nomore").html("No hay más resultados");
+			}
+			
+			$(".loading>img").hide();
+		},
+		error: function(e){
+
+		}
+	});
+}
+});
 // -----Insertar
 
 
