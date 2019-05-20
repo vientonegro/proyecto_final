@@ -22,28 +22,28 @@ class producto extends Model
 				switch($ord)
 				{
 					case 1:
+					$orderBY = "`usuarios_usuario` asc" ;
 
-					$orderBY = "`idproductos` asc" ;
 					break;
 
 					case 2:
 
-					$orderBY = "`usuarios_usuario` asc" ;
+					$orderBY = "`usuarios_usuario` asc" ;	
 					break;
 
 					case 3:
 
-					$orderBY = "`usuarios_usuario` asc" ;
+					$orderBY = "`precio` asc" ;
 					break;
 
 					case 4:
 
-					$orderBY = "`precio` asc" ;
+					$orderBY = "`precio` desc" ;
 					break;
 
 					case 5:
 
-					$orderBY = "`precio` desc" ;
+					$orderBY = "`idproductos` asc" ;
 					break;
 
 					default:
