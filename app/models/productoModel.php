@@ -22,33 +22,33 @@ class producto extends Model
 				switch($ord)
 				{
 					case 1:
-					$orderBY = "`usuarios_usuario` asc" ;
+					$orderBY = "`usuarios_usuario` asc";
 
 					break;
 
 					case 2:
 
-					$orderBY = "`usuarios_usuario` asc" ;	
+					$orderBY = "`usuarios_usuario` desc";	
 					break;
 
 					case 3:
 
-					$orderBY = "`precio` asc" ;
+					$orderBY = "`precio` asc";
 					break;
 
 					case 4:
 
-					$orderBY = "`precio` desc" ;
+					$orderBY = "`precio` desc";
 					break;
 
 					case 5:
 
-					$orderBY = "`idproductos` asc" ;
+					$orderBY = "`idproductos` asc";
 					break;
 
 					default:
 
-					$orderBY = "`idproductos` DESC" ;
+					$orderBY = "`idproductos` DESC";
 				}
 			}
 			$sql = (" SELECT * from " .self::$table. " " .$filtro. "  ORDER BY ".$orderBY."  LIMIT $pos, 3");	
