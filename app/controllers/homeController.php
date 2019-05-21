@@ -22,6 +22,7 @@ class homeController extends Controller {
                 $content.='<div class="card">';
                     $content.='<div class="image_card" style="background-image: url('.WEBROOT.'img/'.$value['imagen'].')"></div>';
                     $content.='<h2>'.$value["titulo"].'</h2>';
+                    $content.='<p>'."Artista: ".$value["usuarios_usuario"].'</p>';
                     $content.='<p>'.$value["descripcion"].'</p>';
                     $content.='<p>'."Precio: ".$value["precio"]." €".'</p>';
                 $content.='</div>';

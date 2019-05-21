@@ -112,6 +112,34 @@ function get_recentHome()
 		}
 	});
 }
+//Historial
+function getHist()
+{
+	$.ajax({
+		type: "post",
+		dataType: "json",
+		url: url+"historial/recent",
+		data: "pos="+pos_actual,
+
+		success: function(data){
+			pos_actual+=6;
+			if(data.length>0)
+			{
+				$(".content").append(data);
+				$(".more").show();
+			}
+			else
+			{
+				$("p.nomore").html("No hay más resultados");
+			}
+			
+			$(".loading>img").hide();
+		},
+		error: function(e){
+
+		}
+	});
+}
 //buscar
 $(document).ready(function(){
 
