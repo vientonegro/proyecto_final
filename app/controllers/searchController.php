@@ -7,10 +7,13 @@ class searchController extends Controller {
 
     public function index()
     {   
-    	$d['productos'] = $this->home_structure(home::get_recentHome(0));
+    	$d['productos'] = $this->home_structure(search::getdat(0));
     	$d['script'] = "index";
         // $d['title'] = $d["titulo"];
         $this->set($d);
+                var_dump($d);
+                exit;
+                echo "hola";
         $this->render('index');
     }
 
