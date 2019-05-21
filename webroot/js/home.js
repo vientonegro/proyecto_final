@@ -23,7 +23,7 @@
 
 
 //Categoria
-var pos_actual = 0;
+var pos_actual = 6;
 
 $(document).ready(function(){
 

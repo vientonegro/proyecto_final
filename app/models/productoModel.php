@@ -51,7 +51,7 @@ class producto extends Model
 					$orderBY = "`idproductos` DESC";
 				}
 			}
-			$sql = (" SELECT * from " .self::$table. " " .$filtro. "  ORDER BY ".$orderBY."  LIMIT $pos, 3");	
+			$sql = (" SELECT * from " .self::$table. " " .$filtro. "  ORDER BY ".$orderBY."  LIMIT $pos, 6");	
 			// var_dump($sql);		
 			$stmt = $connect->prepare($sql);
 			$stmt->execute();
