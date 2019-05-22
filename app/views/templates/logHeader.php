@@ -9,6 +9,6 @@
                     <li><a href="login/salir">Salir</a></li>
                     <li><img src="<?php echo BASE_DOMAIN_DIR_IMG?>carro2.png" id="carro"></li>
                     <li><img id="lupa"  src="<?php echo BASE_DOMAIN_DIR_IMG?>lupa.png" onclick="buscar()"></li>
-                    <li><a href="search/index"></a><input type="text" id="buscar" name="buscar" type="search"placeholder="Buscar ..." onblur="hide_input()" onkeyup="valida(event)"></li>
+                    <li><a href="/proyecto_final/search/recent"></a><input type="text" id="buscar" name="buscar" type="search" placeholder="Buscar ..." onblur="hide_input()" onkeyup="valida(event)"></li>
                 </ul>
             </nav>

@@ -20,7 +20,7 @@ class historial extends Model
 	    		$us = $_SESSION['usuario'];
 	    		
 	    		$sql = (" SELECT * from " .self::$table. "  where `usuarios_usuario` = '$us' ");	
-	    		// $sql = ("SELECT * from ".self::$table. " where categoria ORDER BY `idproductos` DESC LIMIT  $pos, 6");
+
 				// var_dump($sql);		
 				$stmt = $connect->prepare($sql);
 				$stmt->execute();

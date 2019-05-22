@@ -7,17 +7,18 @@ class searchController extends Controller {
 
     public function index()
     {   
-    	$d['productos'] = $this->home_structure(search::getdat(0));
+    	$d['productos'] = $this->search_structure(search::getdat(0));
+
     	$d['script'] = "index";
         // $d['title'] = $d["titulo"];
         $this->set($d);
-                var_dump($d);
-                exit;
-                echo "hola";
+                // var_dump($d);
+                // exit;
+                // echo "hola";
         $this->render('index');
     }
 
-    private function home_structure($producto_array)
+    private function search_structure($producto_array)
     {
     	$content = "";
     	foreach ($producto_array as $value) 
@@ -26,6 +27,7 @@ class searchController extends Controller {
                 $content.='<div class="card">';
                     $content.='<div class="image_card" style="background-image: url('.WEBROOT.'img/'.$value['imagen'].')"></div>';
                     $content.='<h2>'.$value["titulo"].'</h2>';
+                    $content.='<p>'."Artista: ".$value["usuarios_usuario"].'</p>';
                     $content.='<p>'.$value["descripcion"].'</p>';
                     $content.='<p>'."Precio: ".$value["precio"]." €".'</p>';
                 $content.='</div>';
@@ -40,7 +42,7 @@ class searchController extends Controller {
     {
     	$pos = $_POST["pos"];
         
-    	$d = $this->home_structure(search::getdat($pos));
+    	$d = $this->search_structure(search::getdat($pos));
         
   		echo json_encode($d);
      

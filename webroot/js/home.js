@@ -112,7 +112,7 @@ function get_recentHome()
 		}
 	});
 }
-//Historial
+//-------------Historial
 function getHist()
 {
 	$.ajax({
@@ -140,8 +140,10 @@ function getHist()
 		}
 	});
 }
-//buscar
+//-----------buscar
 $(document).ready(function(){
+
+
 
 	$("#buscar").on("keypress", function(e)
 	{
@@ -151,36 +153,29 @@ $(document).ready(function(){
 			var dato = JSON.stringify($("#buscar").val());
 			// coge el dato de la funcion
 			console.log(dato);
-    	}
-	});
 
-function getdat()
-{
-	$.ajax({
-		type: "post",
-		dataType: "json",
-		url: url+"search/recent",
-		data: "pos="+pos_actual+"$dato="+dato,
-		
-		success: function(data){
-			pos_actual+=6;
-			if(data.length>0)
-			{
-				$(".content").append(data);
-				$(".more").show();
-			}
-			else
-			{
-				$("p.nomore").html("No hay más resultados");
-			}
-			
-			$(".loading>img").hide();
-		},
-		error: function(e){
 
+				$.ajax({
+					type: "post",
+					dataType: "json",
+					url: "/proyecto_final/search/recent",
+					data: "pos="+dato,
+					
+					success: function(data){
+						// pos_actual+=6;
+						if(data.length>0)
+						{
+							$(".content").append(data);
+							
+						}
+						
+					},
+					error: function(e){
+
+					}
+				});
 		}
 	});
-}
 });
 // -----Insertar
 
