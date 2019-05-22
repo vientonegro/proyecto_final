@@ -6,7 +6,6 @@
                     <li><a href="contacto/index">Contacto</a></li>
                     <li><a href="registro/index">Registro</a></li>
                     <li><a href="login/index">Login</a></li>
-                    <li><img src="<?php echo BASE_DOMAIN_DIR_IMG?>carro2.png" id="carro"></li>
                     <li><a href="search/index">Buscar</a></li>
                     <li><img id="lupa" src="<?php echo BASE_DOMAIN_DIR_IMG?>lupa.png" onclick="buscar()"></li>
                     <li><input type="text" id="buscar"  name="buscar" type="search" placeholder="Buscar ..." onblur="hide_input()" onkeyup="valida(event)"></li>
