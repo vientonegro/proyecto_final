@@ -34,6 +34,7 @@ class searchController extends Controller {
             $content.='</a>';
     	}
 
+
     	return $content;
     }
 

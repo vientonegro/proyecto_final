@@ -143,8 +143,6 @@ function getHist()
 //-----------buscar
 $(document).ready(function(){
 
-
-
 	$("#buscar").on("keypress", function(e)
 	{
 		if(e.which == 13) 
@@ -152,23 +150,22 @@ $(document).ready(function(){
 
 			var dato = JSON.stringify($("#buscar").val());
 			// coge el dato de la funcion
-			console.log(dato);
-
-
+			// console.log(dato);
 				$.ajax({
 					type: "post",
 					dataType: "json",
 					url: "/proyecto_final/search/recent",
 					data: "pos="+dato,
-					
+
 					success: function(data){
 						// pos_actual+=6;
+
 						if(data.length>0)
 						{
 							$(".content").append(data);
 							
 						}
-						
+
 					},
 					error: function(e){
 

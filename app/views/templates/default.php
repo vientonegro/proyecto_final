@@ -22,11 +22,12 @@
         if(isset($_SESSION["usuario"]))
         {
           require_once 'logHeader.php';
-        }
 
-        else{
+        }else 
+        {
           require_once 'sinLogHeader.php';
         }
+
         ?>
 
             <div class="header_cab">
