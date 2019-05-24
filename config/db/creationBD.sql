@@ -98,7 +98,7 @@ COMMIT;
 
 
 
-
+update usuarios set email = email, password = password where usuario = 'viento';
 select * from productos where titulo ORDER BY `idproductos` DESC LIMIT 6 ;
 select * from usuarios;
 select * from productos;

@@ -1,5 +1,5 @@
 <?php defined('BASEPATH') or exit ('No se permite acceso directo');
-
+require_once(ROOT . DS .'app' .DS . 'models' . DS . 'modificarModel.php');
 class modificarController extends Controller 
 {
 
@@ -10,21 +10,19 @@ class modificarController extends Controller
 
     }
    
-    public function usuario()
+    public function modi()
 	{
 
-		if(isset($_POST["usuarioR"]) && isset($_POST["emailR"]) && isset($_POST["contraR"]))
+		if(isset($_POST["emailM"]) && isset($_POST["contraM"]))
 		{
 
-			$regUsu = Security::secure_input($_POST["usuarioR"]);
-			$regEm = Security::secure_input($_POST["emailR"]);
-			$regCon = Security::secure_input($_POST["contraR"]);
 
-			require_once(ROOT . DS .'app' .DS . 'models' . DS . 'usuarioModel.php');
+			$modEm = Security::secure_input($_POST["emailM"]);
+			$modCon = Security::secure_input($_POST["contraM"]);
       
-			$insertar = new usuario();
+			$insertar = new modificar();
 
-			$d= $insertar->insertRegistro($regUsu,$regEm,$regCon);
+			$d= $insertar->modificarRegistro($modEm,$modCon);
 
 
 			echo json_encode($d);

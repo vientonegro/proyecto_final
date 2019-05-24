@@ -10,6 +10,7 @@ class searchController extends Controller {
     	$d['productos'] = $this->search_structure(search::getdat(0));
 
     	$d['script'] = "index";
+        // $d['var'] = "1";
         // $d['title'] = $d["titulo"];
         $this->set($d);
                 // var_dump($d);

@@ -13,12 +13,18 @@
         <script type="text/javascript" src="webroot/js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="webroot/js/home.js"></script>
         <script type="text/javascript" src="webroot/js/contacto.js"></script>
+        <script type="text/javascript" src="webroot/js/modificar.js"></script>
         <link rel="stylesheet" type="text/css" href="webroot/css/contacto.css">
         <link rel="stylesheet" type="text/css" href="webroot/css/dinamic.css">
         <link rel="stylesheet" type="text/css" href="webroot/css/detalle.css">   
     </head>
     <body>
       <?php
+        // if(isset($d))
+        // {
+        //   require_once 'search.php';
+
+        // }
         if(isset($_SESSION["usuario"]))
         {
           require_once 'logHeader.php';
