@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') or exit ('No se permite acceso directo');?>
 	
 	<h2 class="inse"><a href="historial/index">Historial</a></h2>
-		<h2 class="inse"><a href="modificar/index">Modificar Perfil</a></h2>
+	<h2 class="inse"><a href="modificar/index">Modificar Perfil</a></h2>
 
 	<form class="insertar" method="POST" id="insertar" action="perfil/insert" enctype="multipart/form-data">
 		<h2 class="inse">Insertar</h2>

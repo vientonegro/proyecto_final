@@ -2,7 +2,7 @@
 	// Lupa y input
 	function buscar()
 	{
-    	document.getElementById("buscar").style.transform = "translateX(0)";
+    	document.getElementById("buscar").style.transform = "translateX(15%)";
     	document.getElementById("buscar").focus();
 	}
 
@@ -162,7 +162,7 @@ $(document).ready(function(){
 
 						if(data.length>0)
 						{
-							$(".content").append(data);
+							$(".content").html(data);
 							
 						}
 

@@ -6,6 +6,8 @@
                     <li><input type="text" id="buscar"  name="buscar" type="search" placeholder="Buscar ..." onblur="hide_input()" onkeyup="valida(event)"></li>
                 </ul>
             </nav>
+
+            	<h2 class="inse">Buscar</h2>
  <div class="content">
      <?php echo $productos;?>
  </div>
