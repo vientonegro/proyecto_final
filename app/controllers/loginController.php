@@ -14,6 +14,8 @@ class loginController extends Controller {
 
 			$logUsu = Security::secure_input($_POST["usuarioL"]);
 			$logCon = Security::secure_input($_POST["contraL"]);
+			$logCon = Security::secure_input($_POST["contraL"]);
+
 
 			require_once(ROOT . DS .'app' .DS . 'models' . DS . 'usuarioModel.php');
 

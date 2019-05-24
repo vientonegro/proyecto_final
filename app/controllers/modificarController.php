@@ -18,9 +18,9 @@ class modificarController extends Controller
 
 
 			$modEm = Security::secure_input($_POST["emailM"]);
-			$modEm = Security::en_de_cryptIt($modEm,'en');
+			// $modEm = Security::en_de_cryptIt($modEm,'en');
 			$modCon = Security::secure_input($_POST["contraM"]);
-			$modCon = Security::en_de_cryptIt($modCon,'en');
+			// $modCon = Security::en_de_cryptIt($modCon,'en');
 			
 			$insertar = new modificar();
 

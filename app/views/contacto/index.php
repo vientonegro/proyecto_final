@@ -22,24 +22,3 @@
        <button type="submit" class="bu conta__but">Enviar</button>
   </form>
 </div>
-
-
-<!-- /proyecto_final/webroot/img/postal.jpg -->
-
-
-
-<!-- <div class="contacto">
-    <form id="contacto" method="post" action="contacto/index">
-     <ul>
-      <li><h3 class="contacto">Contacto</h3></li>
-
-      <li><input id="nombre" name="nombre" type="text" placeholder="Nombre" required></li>
-
-      <li><input id="email" name="email" placeholder="email" type="email" required></li>
-
-      <li><textarea id="mensaje" name="mensaje" rows="10" cols="50" placeholder="Introduce el mensaje"  required></textarea></li>  
-      <input type="submit" value="Enviar" ></li>
-      <li><span id="mensaje"></span></li>
-    </ul>
-  </form>
-</div> -->

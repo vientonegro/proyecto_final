@@ -1,5 +1,10 @@
 <?php defined('BASEPATH') or exit ('No se permite acceso directo'); 
 
+// use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\Exception;
+// require_once '../libs/PHPMailer/Exception.php';
+// require_once '../libs/PHPMailer/PHPMailer.php';
+// require_once '../libs/PHPMailer/SMTP.php';
 function removeMagicQuotes() {
 
 	if (get_magic_quotes_gpc()) {
@@ -32,3 +37,29 @@ function unregisterGlobals() {
 /** Execute functions **/
 removeMagicQuotes();
 unregisterGlobals(); 
+
+// function email($email, $subject, $body) {
+
+//para servidor GMAIL, quitar seguridad en la configuración de la cuenta
+//https://www.google.com/settings/u/1/security/lesssecureapps
+
+// 	$mail = new PHPMailer;
+//     $mail->isSMTP();
+//     $mail->IsHTML(true);
+//     $mail->SMTPDebug = 0;
+//     $mail->CharSet = 'UTF-8';
+//     $mail->Host = 'smtp.gmail.com';
+//     $mail->Port = 465;
+//     $mail->SMTPSecure = 'ssl';
+//     $mail->SMTPAuth = true;
+//     $mail->Username = "pruebascim1234@gmail.com";
+//     $mail->Password = "1234pruebascim1234";
+//     $mail->setFrom('pruebascim1234@gmail.com', 'Gmail');
+//     $mail->addAddress($email);
+//     $mail->Subject = $subject;
+//     $mail->MsgHTML($body);
+    
+//     if($mail->send()) {return true;}
+//     else {return false;}
+
+// }

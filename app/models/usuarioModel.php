@@ -61,6 +61,7 @@ class usuario extends Model
 		$stmt->bindParam(':password', $password);
 		$stmt->execute();
 		$rows = $stmt->rowCount();
+		// $usuario = Security::en_de_cryptIt($password,'de');
 
 
 		if ($rows > 0)
