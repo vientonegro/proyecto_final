@@ -7,7 +7,7 @@
                 </ul>
             </nav>
 
-            	<h2 class="inse">Buscar</h2>
+            	<h2 class="inser">Buscar</h2>
  <div class="content">
      <?php echo $productos;?>
  </div>
