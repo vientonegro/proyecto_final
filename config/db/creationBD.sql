@@ -62,10 +62,10 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `CreationModel`;
-INSERT INTO `CreationModel`.`usuarios` (`usuario`, `email`, `password`) VALUES ('viento', 'bla@bla', '1');
-INSERT INTO `CreationModel`.`usuarios` (`usuario`, `email`, `password`) VALUES ('naruto', 'nar@nar', '1');
-INSERT INTO `CreationModel`.`usuarios` (`usuario`, `email`, `password`) VALUES ('asla', 'aa@bla', '1');
-INSERT INTO `CreationModel`.`usuarios` (`usuario`, `email`, `password`) VALUES ('zyra', 'zzz@nar', '1');
+INSERT INTO `CreationModel`.`usuarios` (`usuario`, `email`, `password`) VALUES ('viento', 'bmNETTBuKzJhV2RHQi9UZkY3RDdmUT09', 'dXlpa1R1WG9QMHdwVjBJOHdTcWtmZz09');
+INSERT INTO `CreationModel`.`usuarios` (`usuario`, `email`, `password`) VALUES ('naruto', 'YUZ6ZEkzTGt2bDd5WjVGd0lZdnZBUT09', 'dXlpa1R1WG9QMHdwVjBJOHdTcWtmZz09');
+INSERT INTO `CreationModel`.`usuarios` (`usuario`, `email`, `password`) VALUES ('asla', 'bHNqUFArTTVQdFNzVDlOK285aEV4UT09', 'dXlpa1R1WG9QMHdwVjBJOHdTcWtmZz09');
+INSERT INTO `CreationModel`.`usuarios` (`usuario`, `email`, `password`) VALUES ('zyra', 'bHZ3ZmxLZnQ1YXA4MjNSVGQ0V2tPdz09', 'dXlpa1R1WG9QMHdwVjBJOHdTcWtmZz09');
 COMMIT;
 
 

@@ -18,9 +18,9 @@ class registroController extends Controller
 
 			$regUsu = Security::secure_input($_POST["usuarioR"]);
 			$regEm = Security::secure_input($_POST["emailR"]);
-			// $regEm = Security::en_de_cryptIt($regEm,'en');
+			$regEm = Security::en_de_cryptIt($regEm,'en');
 			$regCon = Security::secure_input($_POST["contraR"]);
-			// $regCon = Security::en_de_cryptIt($regCon,'en');
+			$regCon = Security::en_de_cryptIt($regCon,'en');
 
 			require_once(ROOT . DS .'app' .DS . 'models' . DS . 'usuarioModel.php');
       
