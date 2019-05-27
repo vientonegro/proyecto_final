@@ -5,30 +5,33 @@ $(document).ready(function(){
 
 		msg = "";
 
-    if($("#email").val() == ""){
-      msg += "El campo email está vacío <br>";
-      $("#email").addClass("error-validation");
-    } else {
-      $("#email").removeClass("error-validation");
-    }
-		if($("#emailM").val() == ""){
-			msg += "El campo email está vacío <br>";
+		if($("#emailM").val() == "" || $("#emailM").val().indexOf('@', 0) == -1){
+			msg += "El campo email está vacío o no lle va @ <br>";
 			$("#emailM").addClass("error-validation");
 		} else {
 			$("#emailM").removeClass("error-validation");
 		}
-    if($("#contra").val() == ""){
-      msg += "El campo contraseña está vacío <br>";
-      $("#contra").addClass("error-validation");
+
+    if($("#emailMo").val() != ($("#emailM").val())){
+      msg += "El campo email No coincide <br>";
+      $("#emailMo").addClass("error-validation");
     } else {
-      $("#contra").removeClass("error-validation");
+      $("#emailMo").removeClass("error-validation");
     }
+
+
 		if($("#contraM").val() == ""){
 			msg += "El campo contraseña está vacío <br>";
 			$("#contraM").addClass("error-validation");
 		} else {
 			$("#contraM").removeClass("error-validation");
 		}
+    if($("#contrao").val() != ($("#contraM").val())){
+      msg += "El campo contraseña No coincide <br>";
+      $("#contrao").addClass("error-validation");
+    } else {
+      $("#contrao").removeClass("error-validation");
+    }
 
   		$("#errorsM").html(msg);
 
@@ -49,7 +52,7 @@ $(document).ready(function(){
 
   					$("#errorsM").html(data);
 
-  					setTimeout(function(){ location.href = 'modificar/index'; }, 3000);
+  					location.href = 'perfil/index';
   					
   				},
 

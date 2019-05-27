@@ -118,6 +118,7 @@ header>nav#priMenu>ul>li>input#buscar
     top: 18px;
     transform: translateX(100%);
     text-align: left;
+    z-index: 2;
 }
 body
 {
@@ -131,6 +132,7 @@ body
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	height: 100vh;
+
 
 
 }

@@ -7,7 +7,7 @@
                 </ul>
             </nav>
 
-            	<h2 class="inser">Buscar</h2>
+            	<h2 class="inser" id="bus" onclick="buscar()">Buscar<img id="lup" src="<?php echo BASE_DOMAIN_DIR_IMG?>lupa.png" ></h2>
  <div class="content">
      <?php echo $productos;?>
  </div>

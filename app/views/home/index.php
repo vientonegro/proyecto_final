@@ -39,8 +39,10 @@
                         <h3 class="post">Te puede interesar</h3>
                         <ul class="reci">
                             <li class="letras">
-                                <img class="foto" src="<?php echo BASE_DOMAIN_DIR_IMG?>11.jpg">
-                                <span>Conocenos</span>
+                                
+                                    <img class="foto" src="<?php echo BASE_DOMAIN_DIR_IMG?>11.jpg">
+                                    <a href="conocenos/index"><span>Conocenos</span>
+                                </a>
                             </li>
                         </ul>
                         <ul class="reci">

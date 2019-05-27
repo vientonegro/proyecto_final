@@ -98,14 +98,14 @@ function get_recentHome()
 			if(data.length>0)
 			{
 				$(".content").append(data);
-				$(".more").show();
+				// $(".more").show();
 			}
-			else
-			{
-				$("p.nomore").html("No hay más resultados");
-			}
+			// else
+			// {
+			// 	$("p.nomore").html("No hay más resultados");
+			// }
 			
-			$(".loading>img").hide();
+			// $(".loading>img").hide();
 		},
 		error: function(e){
 
@@ -332,11 +332,25 @@ $(document).ready(function(){
 		} else {
 			$("#contraR").removeClass("error-validation");
 		}
-		if($("#emailR").val() == ""){
-			msg += "El campo contraseña está vacío <br>";
+		if($("#contraRE").val() != ($("#contraR").val())){
+			msg += "El campo contraseña NO coincide <br>";
+			$("#contraRE").addClass("error-validation");
+		} else {
+			$("#contraRE").removeClass("error-validation");
+		}
+
+		if($("#emailR").val() == "" || $("#emailR").val().indexOf('@', 0) == -1){
+			msg += "El campo email está vacío o no lleva @ <br>";
 			$("#emailR").addClass("error-validation");
 		} else {
 			$("#emailR").removeClass("error-validation");
+		}
+
+		if($("#emailRE").val() != ($("#emailR").val())){
+			msg += "El campo email No coincide <br>";
+			$("#emailRE").addClass("error-validation");
+		} else {
+			$("#emailRE").removeClass("error-validation");
 		}
 
   		$("#errorsR").html(msg);

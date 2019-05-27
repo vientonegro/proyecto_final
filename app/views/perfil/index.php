@@ -1,7 +1,7 @@
 <?php defined('BASEPATH') or exit ('No se permite acceso directo');?>
 	
-	<div class="inse"><h2 ><a href="historial/index">Historial</a></h2></div>
-	<div class="inse2"><h2 ><a href="modificar/index">Modificar Perfil</a></h2></div>
+	<a href="historial/index"><div class="inse"><h2 >Historial</h2></div></a>
+	<a href="modificar/index"><div class="inse2"><h2 >Modificar Perfil</h2></div></a>
 	<div class="clear"></div>
 
 	<h2 class="inser">Insertar</h2>

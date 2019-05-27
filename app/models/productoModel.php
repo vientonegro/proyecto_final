@@ -78,7 +78,7 @@ class producto extends Model
 		}	
 		public function getSubString($string)
 		{
-		    $length = 400;
+		    $length = 150;
 		    $stringDisplay = substr(strip_tags($string), 0, $length);
 		    if (strlen(strip_tags($string)) > $length)
 		        $stringDisplay .= ' ...';
