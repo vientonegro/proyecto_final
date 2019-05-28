@@ -12,9 +12,7 @@ class searchController extends Controller {
     	$d['script'] = "index";
         // $d['title'] = $d["titulo"];
         $this->set($d);
-                // var_dump($d);
-                // exit;
-                // echo "hola";
+
         $this->render('index');
     }
 

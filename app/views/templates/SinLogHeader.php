@@ -3,7 +3,7 @@
         <header onload="cambiarImagenes()">
             <nav id="priMenu" id="arri">
                 <ul>
-                    <li><img src="<?php echo BASE_DOMAIN_DIR_IMG?>pint2.png" id="logo"></li>
+                    <li><img src="<?php echo BASE_DOMAIN_DIR_IMG?>lobo4.png" id="logo"></li>
                     <li><a href="contacto/index">Contacto</a></li>
                     <li><a href="registro/index">Registro</a></li>
                     <li><a href="login/index">Login</a></li>

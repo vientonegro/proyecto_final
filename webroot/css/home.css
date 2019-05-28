@@ -92,11 +92,11 @@ header>nav#priMenu>ul>li>img
 header>nav#priMenu>ul>li>img#logo
 {	
     height: auto;
-    width: 86px;
+    width: 88px;
     position: absolute;
     border: 0;
-	left: -22px;
-    top: -8px;
+    left: -20px;
+    top: -21px;
     transform: translateX(35%);
  	
 } 
@@ -374,7 +374,7 @@ aside>ul>li>img.foto:hover
 	box-shadow: 2px 2px 10px black;
 	cursor: pointer;
 }
-aside>ul>li>span
+aside ul li a span
 {
 	vertical-align: middle; 
 	padding-left: 25px;

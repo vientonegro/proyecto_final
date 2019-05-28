@@ -14,4 +14,5 @@ define('BASE_DIR_URL', '/proyecto_final/');
 define('BASE_DOMAIN_DIR_URL', 'http://localhost/proyecto_final/');
 define('BASE_DOMAIN_DIR_IMG', '/proyecto_final/webroot/img/');
 define('WEBROOT', BASE_DOMAIN_DIR_URL.'webroot/');
+define('Ig','https://www.instagram.com/?hl=es');
 

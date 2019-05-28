@@ -45,22 +45,28 @@
                                 </a>
                             </li>
                         </ul>
-                        <ul class="reci">
+<!--                         <ul class="reci">
                             <li class="letras">
                                 <img class="foto" src="<?php echo BASE_DOMAIN_DIR_IMG?>f.jpg">
+                                <a href="conocenos/index">
                                 <span>Reseñas</span>
+                                </a>
                             </li>
-                        </ul>
+                        </ul> -->
                         <ul class="reci">
                             <li class="letras">
                                 <img class="foto" src="<?php echo BASE_DOMAIN_DIR_IMG?>i.svg">
+                                <a href="Ig" target="_blank">
                                 <span>Instagram</span>
+                                </a>
                             </li>
                         </ul>
                         <ul class="reci">
                             <li class="letras">
                                 <img class="foto" src="<?php echo BASE_DOMAIN_DIR_IMG?>f.svg">
+                                <a href="www.Facebook.com" target="_blank">
                                 <span>Facebook</span>
+                                </a>
                             </li>
                         </ul>               
                     </aside>                 
