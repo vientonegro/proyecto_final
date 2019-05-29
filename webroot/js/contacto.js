@@ -1,21 +1,44 @@
 
 $(document).ready(function(){
 
-  $("#contacto").on("submit", function(e){
+$("#contact").click(function(){
 
-    e.preventDefault();
-    var flag = true;
     msg = "";
-    
-    $("#msg").html(msg);
 
-    if(flag)
-    {
-      document.getElementById("contacto").submit();
-      msg="Mensaje enviado correctamente";
+      if($("#contact-name").val() == ""){
+      msg += "El campo nombre está vacío <br>";
+      $("#contact-name").addClass("error-validation");
+    } else {
+      $("#contact-name").removeClass("error-validation");
+    }
+      if($("#contact-apellido").val() == ""){
+      msg += "El campo apellido está vacío <br>";
+      $("#contact-apellido").addClass("error-validation");
+    } else {
+      $("#contact-apellido").removeClass("error-validation");
     }
 
+      if($("#contact-email").val() == ""){
+      msg += "El campo email está vacío <br>";
+      $("#contact-email").addClass("error-validation");
+    } else {
+      $("#contact-email").removeClass("error-validation");
+    }
+      if($("#contact-message").val() == ""){
+      msg += "El campo mensaje está vacío <br>";
+      $("#contact-message").addClass("error-validation");
+    } else {
+      $("#contact-message").removeClass("error-validation");
+    }
+
+      $("#contact-results").html(msg);
+
+      if(msg == ""){
+
+    
+      }
   });
+
 
 });
 

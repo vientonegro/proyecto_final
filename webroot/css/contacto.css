@@ -245,7 +245,7 @@ h3.contacto
     width: 290px;
     font-family: lustra;
 }
-.conta__but{
+.btn{
     position: absolute;
     top: 75%;
     right: 17%;
@@ -263,10 +263,17 @@ h3.contacto
     background-color: #eab46b;
 }
 
-
 .decor{
   display:none;
 }
+#contact-results
+{
+    position: absolute;
+    top: 22%;
+    left: 12%;
+}
+
+
 
 @media screen and (max-width: 1024px) {
 

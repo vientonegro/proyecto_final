@@ -7,23 +7,23 @@ class contactoController extends Controller {
         $this->render('index');
 
     }
-    // public function contactoForm() {
+    public function contactoForm() {
 
-    //     if (isset($_POST['contact-name']) && isset($_POST['contact-email']) && 
-    //         isset($_POST['contact-message'])) {
+        if (isset($_POST['contact-name']) && isset($_POST['contact-apellido']) && isset($_POST['contact-email']) && 
+            isset($_POST['contact-message'])) {
 
-    //         require_once(ROOT . DS . 'app' . DS . 'models' . DS . 'contactoModel.php'); 
-    //         $contactForm = new contacto;
-    //         $d['mensaje'] = $contactForm->contactoFormEnviar();
-    //         $this->set($d);
-    //         $this->render('index');
+            require_once(ROOT . DS . 'app' . DS . 'models' . DS . 'contactoModel.php'); 
+            $contactForm = new contacto;
+            $d['mensaje'] = $contactForm->contactoFormEnviar();
+            $this->set($d);
+            $this->render('index');
 
-    //     } else {
+        } else {
 
-    //         header('Location: ' . BASE_DOMAIN_DIR_URL . 'webroot/404.php');
+            header('Location: ' . BASE_DOMAIN_DIR_URL . 'webroot/404.php');
 
-    //     }
+        }
 
-    // }    
+    }    
 
 }

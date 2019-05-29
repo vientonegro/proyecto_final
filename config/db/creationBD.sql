@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `CreationModel`.`productos` (
   `categoria` INT NOT NULL,
   `titulo` VARCHAR(100) NOT NULL,
   `imagen` VARCHAR(100) NOT NULL,
-  `descripcion` VARCHAR(400) NOT NULL,
+  `descripcion` LONGTEXT NOT NULL,
   `precio` FLOAT NOT NULL,
   `usuarios_usuario` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`idproductos`),

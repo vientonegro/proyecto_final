@@ -56,7 +56,7 @@
                         <ul class="reci">
                             <li class="letras">
                                 <img class="foto" src="<?php echo BASE_DOMAIN_DIR_IMG?>i.svg">
-                                <a href="Ig" target="_blank">
+                                <a href="https://www.instagram.com/?hl=es" target="_blank">
                                 <span>Instagram</span>
                                 </a>
                             </li>
@@ -64,7 +64,7 @@
                         <ul class="reci">
                             <li class="letras">
                                 <img class="foto" src="<?php echo BASE_DOMAIN_DIR_IMG?>f.svg">
-                                <a href="www.Facebook.com" target="_blank">
+                                <a href="https://es-es.facebook.com/" target="_blank">
                                 <span>Facebook</span>
                                 </a>
                             </li>
