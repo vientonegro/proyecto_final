@@ -2,7 +2,7 @@
 
 <h1 class="tacto">Contacto</h1>
 <div class="contactor">
-  <form class="conta" action="<?php echo BASE_DOMAIN_DIR_URL?>contacto/contactoForm" id="contact" method="post">
+  <form class="conta" action="contacto/contactoForm" id="contact" method="post">
     <div class="nom item">
       <label class="lab">Nombre:</label>
       <input class="inp" type="text" name="contact-name" id="contact-name">

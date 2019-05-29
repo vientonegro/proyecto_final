@@ -42,9 +42,5 @@ class perfil extends Model
 		}
     }
 
-    public function getHist($categoria,$titulo,$imagen,$descripcion,$precio,$usuarios_usuario)
-    {
-    	
-    }
 
 }
