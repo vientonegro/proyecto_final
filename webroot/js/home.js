@@ -289,7 +289,8 @@ $(document).ready(function(){
 
 // --------Login--Registro
 
-$(document).ready(function(){
+$(document).ready(function()
+{
 
 	$("#registro span").click(function()
 	{

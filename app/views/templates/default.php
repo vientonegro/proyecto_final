@@ -20,6 +20,7 @@
         <link rel="stylesheet" type="text/css" href="webroot/css/conocenos.css">      
     </head>
     <body>
+     <span class="ir-arriba icono"></span>
       <?php
 
         if(isset($_SESSION["usuario"]))

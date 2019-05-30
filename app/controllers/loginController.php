@@ -14,7 +14,7 @@ class loginController extends Controller {
 
 			$logUsu = Security::secure_input($_POST["usuarioL"]);
 			$logCon = Security::secure_input($_POST["contraL"]);
-			$logCon = Security::en_de_cryptIt($logCon,'en');
+			// $logCon = Security::en_de_cryptIt($logCon,'en');
 
 
 

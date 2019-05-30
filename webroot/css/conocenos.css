@@ -1,10 +1,8 @@
 
-/*.dete{
-	width: 90%; 
-	height: auto; 
+.cajaPrinc{
+	width: 100%; 
 	text-align: center; 
 	background: white; 
-	margin: 5%; 
 	border-radius: 3px; 
 	box-shadow: 1px 1px 15px black;
 	justify-content: center;
@@ -14,6 +12,7 @@
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	height: 100vh;
+	margin: 0;
 	
 }
 article
@@ -21,8 +20,12 @@ article
 	text-align: center; 
 	font-size: 30px;
 	font-family: lustra;
-	padding: 36px 5px 5px 5px;
 	background-color: rgba(255,255,255,.8);
+	width: 60%;
+	margin-left: 20%;
+	padding-top: 3%;
+	/*margin-top: 10%;*/
+	/*transform: translateX(50%);*/
 }
 h2.contit
 {
@@ -31,35 +34,28 @@ h2.contit
 	font-size: 70px;
 	font-family: lustra;
 
+
 }
 p.let
 {
-	padding-top: 20px;
 	justify-content: center; 
-}
-
-.cont
-{	
-	width: 100%;
-
-	text-align: center;
-
+	text-align: justify;
+	margin: 20px auto;
 }
 
 
-.contenido
-{	
-	justify-content: center;
-	text-align: center; 
 
-}*/
+.limpiar
+{
+	clear: both;
+}
 /*-------Responsive*/
-/*@media all and (max-width: 1024px)
+@media all and (max-width: 1024px)
 {
 
-.dete{
-	width: 90%; 
-	height: auto; 
+
+.cajaPrinc{
+	width: 100%; 
 	text-align: center; 
 	background: white; 
 	border-radius: 3px; 
@@ -71,6 +67,7 @@ p.let
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	height: 100vh;
+	margin: 0;
 	
 }
 article
@@ -78,9 +75,12 @@ article
 	text-align: center; 
 	font-size: 30px;
 	font-family: lustra;
-	padding: 36px 5px 5px 5px;
 	background-color: rgba(255,255,255,.8);
-
+	width: 60%;
+	margin-left: 20%;
+	padding-top: 3%;
+	/*margin-top: 10%;*/
+	/*transform: translateX(50%);*/
 }
 h2.contit
 {
@@ -89,28 +89,73 @@ h2.contit
 	font-size: 70px;
 	font-family: lustra;
 
+
 }
 p.let
 {
-	padding-top: 20px;
 	justify-content: center; 
+	text-align: justify;
+	margin: 20px auto;
 }
 
-.cont
-{	
-	width: 100%;
-	text-align: center;
+.limpiar
+{
+	clear: both;
 }
-
-
-.contenido
-{	
-	justify-content: center;
-	text-align: center; 
-
-}*/
+}
 /*--------768*/
-/*@media screen and (max-width: 768px)
+@media screen and (max-width: 768px)
 {
 
-]*/
+
+.cajaPrinc{
+	width: 100%; 
+	text-align: center; 
+	background: white; 
+	border-radius: 3px; 
+	box-shadow: 1px 1px 15px black;
+	justify-content: center;
+	background-image: url(/proyecto_final/webroot/img/lobo2.png);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100vh;
+	margin: 0;
+	
+}
+article
+{
+	text-align: center; 
+	font-size: 30px;
+	font-family: lustra;
+	background-color: rgba(255,255,255,.8);
+	width: 60%;
+	margin-left: 20%;
+	padding-top: 3%;
+	/*margin-top: 10%;*/
+	/*transform: translateX(50%);*/
+}
+h2.contit
+{
+
+ 	text-align: center; 
+	font-size: 70px;
+	font-family: lustra;
+
+
+}
+p.let
+{
+	justify-content: center; 
+	text-align: justify;
+	margin: 20px auto;
+}
+
+
+
+.limpiar
+{
+	clear: both;
+}
+}

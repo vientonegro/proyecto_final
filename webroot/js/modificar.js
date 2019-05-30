@@ -1,4 +1,5 @@
-$(document).ready(function(){
+$(document).ready(function()
+{
 
 
 	$("#modif_btn").click(function(){
@@ -26,8 +27,10 @@ $(document).ready(function(){
 		} else {
 			$("#contraM").removeClass("error-validation");
 		}
-    if($("#contrao").val() != ($("#contraM").val())){
-      msg += "El campo contraseña No coincide <br>";
+
+
+      if($("#contrao").val() != ($("#contraM").val())){
+      msg += "El campo contraseña NO coincide <br>";
       $("#contrao").addClass("error-validation");
     } else {
       $("#contrao").removeClass("error-validation");
@@ -35,7 +38,8 @@ $(document).ready(function(){
 
   		$("#errorsM").html(msg);
 
-  		if(msg == ""){
+  		if(msg == "")
+      {
 
   			$.ajax({
 
@@ -64,4 +68,26 @@ $(document).ready(function(){
   		}
 	});
 
+});
+
+
+ // subir arriba
+
+  
+$(document).ready(function(){
+ 
+  $('.ir-arriba').click(function(){
+    $('body, html').animate({
+      scrollTop: '0px'
+    }, 3500);
+  });
+ 
+  $(window).scroll(function(){
+    if( $(this).scrollTop() > 0 ){
+      $('.ir-arriba').slideDown(300);
+    } else {
+      $('.ir-arriba').slideUp(300);
+    }
+  });
+ 
 });

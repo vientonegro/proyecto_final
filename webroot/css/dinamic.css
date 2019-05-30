@@ -97,3 +97,20 @@ span.more
     margin-left: 20%;
 }
 
+    /*FLECHA SUBIR ARRIBA*/
+
+	
+.ir-arriba {
+	/*display:none;*/
+	padding:20px;
+	background: white;
+	font-size:20px;
+	color:#fff;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+	background-image: url(/proyecto_final/webroot/img/icono.png);
+	background-size: cover;
+
+}
