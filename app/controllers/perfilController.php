@@ -13,7 +13,7 @@ class perfilController extends Controller
     {
         // var_dump($_POST);
         // exit;
-        if(isset($_POST["categoria"]) && isset($_POST["titulo"]) && isset($_POST["descripcion"]) && isset($_POST["precio"]) && isset($_POST["usuario"]))
+        if(isset($_POST["categoria"]) && isset($_POST["titulo"]) && isset($_POST["descripcion"]) && isset($_POST["precio"]) )
         {
             //Subir imagen
             $directorio = getcwd().'/img/';
@@ -25,13 +25,13 @@ class perfilController extends Controller
             $titulo = Security::secure_input($_POST["titulo"]);
             $descripcion = Security::secure_input($_POST["descripcion"]);
             $precio = Security::secure_input($_POST["precio"]);           
-            $usuario = Security::secure_input($_POST["usuario"]);
+            // $usuario = Security::secure_input($_POST["usuario"]);
             $imagen = $foto_nueva;
 
             //insertar
             $insertar = new perfil();
 
-            $d['mensaje']= $insertar->getsubir($categoria,$titulo,$imagen,$descripcion,$precio,$usuario);
+            $d['mensaje']= $insertar->getsubir($categoria,$titulo,$imagen,$descripcion,$precio);
 
             $this->set($d);
             $this->render('index');

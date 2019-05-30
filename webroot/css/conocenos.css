@@ -53,3 +53,62 @@ p.let
 	text-align: center; 
 
 }
+@media all and (max-width: 1024px)
+{
+
+.dete{
+	width: 90%; 
+	height: auto; 
+	text-align: center; 
+	background: white; 
+	/*margin: 10%; */
+	border-radius: 3px; 
+	box-shadow: 1px 1px 15px black;
+	justify-content: center;
+	background-image: url(/proyecto_final/webroot/img/lobo2.png);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100vh;
+	
+}
+article
+{
+	text-align: center; 
+	font-size: 30px;
+	font-family: lustra;
+	padding: 36px 5px 5px 5px;
+	background-color: rgba(255,255,255,.8);
+
+}
+h2.contit
+{
+
+ 	text-align: center; 
+	font-size: 70px;
+	font-family: lustra;
+
+}
+p.let
+{
+	padding-top: 20px;
+	justify-content: center; 
+}
+
+.cont
+{	
+	width: 100%;
+
+	text-align: center;
+
+}
+
+
+.contenido
+{	
+	justify-content: center;
+	text-align: center; 
+
+}
+}

@@ -13,22 +13,23 @@ class perfil extends Model
 
 		// Insertar productos
 
-	public function getsubir($categoria,$titulo,$imagen,$descripcion,$precio,$usuarios_usuario)
+	public function getsubir($categoria,$titulo,$imagen,$descripcion,$precio)
     {
 
 		$idproductos = null;
-
+		$usuario_sess = $_SESSION['usuario'];
 		$connect = Model::getInstanceDB();
 		//Gestión de la inserción del dato
 		
 		$sql = "INSERT INTO productos (`categoria`, `titulo`, `imagen`,`descripcion`, `precio`, `usuarios_usuario`) VALUES (:categoria, :titulo, :imagen, :descripcion, :precio, :usuarios_usuario)";
+
 		$stmt = $connect->prepare($sql);
 		$stmt->bindParam(':categoria', $categoria);		
 		$stmt->bindParam(':titulo', $titulo);
 		$stmt->bindParam(':imagen', $imagen);
 		$stmt->bindParam(':descripcion', $descripcion);		
 		$stmt->bindParam(':precio', $precio);
-		$stmt->bindParam(':usuarios_usuario', $usuarios_usuario);
+		$stmt->bindParam(':usuarios_usuario', $usuario_sess);
 
 		//si se ejecuta correctamente el INSERT, retorno al controlador el mensaje de OK
 		if(!$stmt->execute()) {

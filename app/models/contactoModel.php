@@ -10,7 +10,7 @@ class contacto extends Model {
         $message = Security::secure_input($_POST['contact-message']);
 
         ob_start(); 
-        require_once(ROOT . DS . 'app' . DS . 'views' . DS . 'templates' . DS . 'emailTemplates' . DS . 'contactForm.php');
+        require_once(ROOT . DS . 'app' . DS . 'views' . DS . 'templates' . DS . 'contactForm.php');
         $body = ob_get_contents(); 
         ob_end_clean();
         $subject = 'Formulario de contacto';
@@ -21,7 +21,8 @@ class contacto extends Model {
 
         } else {
 
-            return '-Los datos se han enviado correctamente. Gracias por contactar con nosotros';
+            return 'Los datos se han enviado correctamente.<br> 
+            Gracias por contactar con nosotros';
 
         }
        

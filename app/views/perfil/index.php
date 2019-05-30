@@ -31,9 +31,6 @@
 				</li>
 				<li>
 					<input class="loRe" type="file" id="user-img-file" name="user-img-file" onchange="readURL(this)">
-				</li>
-				 <input class="loRe" type="text" name="usuario" placeholder="usuario" id="usuario"/> 
-				</li>
 				<li>
 					<input type="submit" name="subir" value="Subir e insertar"/>
 				</li>

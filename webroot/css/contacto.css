@@ -245,7 +245,127 @@ h3.contacto
     width: 290px;
     font-family: lustra;
 }
-.btn{
+.btn
+{
+    position: absolute;
+    top: 75%;
+    right: 17%;
+}
+.bu{
+    width: 200px;
+    height: 40px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    background-color: #011D6A;
+}
+
+.bu:hover{
+    background-color: #eab46b;
+}
+
+.decor{
+  display:none;
+}
+#contact-results
+{
+    position: absolute;
+    top: 22%;
+    left: 12%;
+    font-family: lustra;
+    /*font-size: 30px;*/
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+  .tacto
+{   
+    margin-top: 3%;
+    text-align: center;
+    font-family: lustra;
+    font-size: 60px;
+    
+
+}
+.contactor{
+    position: relative;
+    background: url('/proyecto_final/webroot/img/p3.jpg') no-repeat center center;
+    margin-bottom: 150px;
+    max-width: 1110px;
+    height: 780px;
+    width: 100%;
+    background-size: 85%;
+    margin: 0 auto;
+
+}
+.conta{
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    width: 100%;
+
+}
+.item{
+    position: absolute;
+}
+
+.inp{
+    max-width: 260px;
+    border: none;
+    font-size: 19px;
+    width: 22vw;
+
+}
+.inp:focus{
+    outline-color: #011d6a;
+}
+.lab{
+    margin-right: 13px;
+    font-size: 18px;
+}
+.area{
+    max-width: 380px;
+    width: 30vw;
+    height: 375px;
+    font-size: 18px;
+    border: 1px 1px 1px black;
+    resize: none;
+}
+.area:focus{
+    outline-color: #011d6a;
+}
+
+.nom{
+    top: 51%;
+    right: 15%;
+    font-family: lustra;
+}
+
+.ap{
+    top: 58%;
+    right: 15%;
+    font-family: lustra;
+}
+
+.ema{
+    top: 64%;
+    right: 15%;
+    font-family: lustra;
+}
+.co{
+    display: flex;
+    flex-direction: column;
+}
+.me{
+    top: 33%;
+    left: 12%;
+    width: 290px;
+    font-family: lustra;
+}
+.btn
+{
     position: absolute;
     top: 75%;
     right: 17%;
@@ -273,45 +393,118 @@ h3.contacto
     left: 12%;
 }
 
+@media screen and (max-width: 768px) {
 
+  .tacto
+{   
+    margin-top: 3%;
+    text-align: center;
+    font-family: lustra;
+    font-size: 60px;
+    
 
-@media screen and (max-width: 1024px) {
+}
+.contactor{
+    position: relative;
+    background: url('/proyecto_final/webroot/img/p3.jpg') no-repeat center center;
+    margin-bottom: 150px;
+    max-width: 1110px;
+    height: 780px;
+    width: 100%;
+    background-size: 85%;
+    margin: 0 auto;
 
-   .conta{
-     margin-top: 160px;
-     width: 60%;
-     margin-bottom: 60px;
-  }
-  .item{
-    position: static;
+}
+.conta{
     display: flex;
     flex-direction: column;
-    width:100%;
-  }
-  .lab{
-    margin-bottom: 10px;
-  }
-  .inp{
-    border: 1px solid #011d6a;
-    margin-bottom: 15px;
-    max-width: 100%;
-    width: 350px;
-    height: 30px;
-  }
-  .area{
-    border: 1px solid #011d6a;
-    width: 350px;
-    max-width: 100%;
-    height: 140px;
-    margin-bottom: 25px;
-  }
-  .bu{
-    position: static;
-    margin-bottom: 20px;
-    max-width: 360px;
+    max-width: 700px;
     width: 100%;
 
 }
+.item{
+    position: absolute;
+}
 
+.inp{
+    max-width: 260px;
+    border: none;
+    font-size: 19px;
+    width: 22vw;
 
+}
+.inp:focus{
+    outline-color: #011d6a;
+}
+.lab{
+    margin-right: 13px;
+    font-size: 18px;
+}
+.area{
+    max-width: 380px;
+    width: 30vw;
+    height: 290px;
+    font-size: 18px;
+    border: 1px 1px 1px black;
+    resize: none;
+}
+.area:focus{
+    outline-color: #011d6a;
+}
+
+.nom{
+    top: 49%;
+    right: 15%;
+    font-family: lustra;
+}
+
+.ap{
+    top: 55%;
+    right: 15%;
+    font-family: lustra;
+}
+
+.ema{
+    top: 60%;
+    right: 15%;
+    font-family: lustra;
+}
+.co{
+    display: flex;
+    flex-direction: column;
+}
+.me{
+    top: 36%;
+    left: 12%;
+    width: 290px;
+    font-family: lustra;
+}
+.btn
+{
+    position: absolute;
+    top: 70%;
+    right: 17%;
+}
+.bu{
+    width: 200px;
+    height: 40px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    background-color: #011D6A;
+}
+
+.bu:hover{
+    background-color: #eab46b;
+}
+
+.decor{
+  display:none;
+}
+#contact-results
+{
+    position: absolute;
+    top: 22%;
+    left: 12%;
+}
 
