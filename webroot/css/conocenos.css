@@ -1,7 +1,7 @@
 
-.dete{
+/*.dete{
 	width: 90%; 
-	/*height: auto; */
+	height: auto; 
 	text-align: center; 
 	background: white; 
 	margin: 5%; 
@@ -52,8 +52,9 @@ p.let
 	justify-content: center;
 	text-align: center; 
 
-}
-@media all and (max-width: 1024px)
+}*/
+/*-------Responsive*/
+/*@media all and (max-width: 1024px)
 {
 
 .dete{
@@ -61,7 +62,6 @@ p.let
 	height: auto; 
 	text-align: center; 
 	background: white; 
-	/*margin: 10%; */
 	border-radius: 3px; 
 	box-shadow: 1px 1px 15px black;
 	justify-content: center;
@@ -99,9 +99,7 @@ p.let
 .cont
 {	
 	width: 100%;
-
 	text-align: center;
-
 }
 
 
@@ -110,5 +108,9 @@ p.let
 	justify-content: center;
 	text-align: center; 
 
-}
-}
+}*/
+/*--------768*/
+/*@media screen and (max-width: 768px)
+{
+
+]*/

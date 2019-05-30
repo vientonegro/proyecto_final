@@ -2,7 +2,7 @@
 
 
 
-	<div class="dete">
+	<div class="cajaPrinc">
 		<article class="art">
 			<h2 class="contit">¿Quién soy?</h2>
 			<p class="let">Soy Daniel, tengo conocimientos en varios campos, gracias a ellos me han encaminado a estudiar desarrollo web, pudiendo crear este proyecto y otro venideros.<p>
