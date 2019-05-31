@@ -1,8 +1,11 @@
 
-.cajaPrinc{
-	width: 100%; 
+
+.det{
+	width: 90%; 
 	text-align: center; 
 	background: white; 
+	margin: 5%;
+	padding-bottom: 2%;
 	border-radius: 3px; 
 	box-shadow: 1px 1px 15px black;
 	justify-content: center;
@@ -11,9 +14,6 @@
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	height: 100vh;
-	margin: 0;
-	
 }
 article
 {
@@ -54,26 +54,10 @@ p.let
 {
 
 
-.cajaPrinc{
-	width: 100%; 
-	text-align: center; 
-	background: white; 
-	border-radius: 3px; 
-	box-shadow: 1px 1px 15px black;
-	justify-content: center;
-	background-image: url(/proyecto_final/webroot/img/lobo2.png);
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	height: 100vh;
-	margin: 0;
-	
-}
 article
 {
 	text-align: center; 
-	font-size: 30px;
+	font-size: 20px;
 	font-family: lustra;
 	background-color: rgba(255,255,255,.8);
 	width: 60%;
@@ -86,7 +70,7 @@ h2.contit
 {
 
  	text-align: center; 
-	font-size: 70px;
+	font-size: 40px;
 	font-family: lustra;
 
 
@@ -108,26 +92,14 @@ p.let
 {
 
 
-.cajaPrinc{
-	width: 100%; 
-	text-align: center; 
-	background: white; 
-	border-radius: 3px; 
-	box-shadow: 1px 1px 15px black;
-	justify-content: center;
-	background-image: url(/proyecto_final/webroot/img/lobo2.png);
-	background-size: cover;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	height: 100vh;
-	margin: 0;
-	
-}
+@media all and (max-width: 1024px)
+{
+
+
 article
 {
 	text-align: center; 
-	font-size: 30px;
+	font-size: 20px;
 	font-family: lustra;
 	background-color: rgba(255,255,255,.8);
 	width: 60%;
@@ -140,7 +112,7 @@ h2.contit
 {
 
  	text-align: center; 
-	font-size: 70px;
+	font-size: 40px;
 	font-family: lustra;
 
 
@@ -152,10 +124,9 @@ p.let
 	margin: 20px auto;
 }
 
-
-
 .limpiar
 {
 	clear: both;
+}
 }
 }

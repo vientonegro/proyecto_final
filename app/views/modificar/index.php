@@ -7,9 +7,9 @@
 		<h2 class="inser">Modificar Contraseña <?php echo $_SESSION["usuario"];?></h2>
 		<form class="LG" method="post" action="modificar/modi" id="modif_btn" name="modif_btn">
 			<input class="loRe" type="text" name="emailM" id="emailM" placeholder="Modificar email">
-			<input class="loRe" type="text" name="emailMo" id="emailMo" placeholder="Repetir email">
+			<!-- <input class="loRe" type="text" name="emailMo" id="emailMo" placeholder="Repetir email"> -->
 			<input class="loRe" type="password" name="contraM" id="contraM" placeholder="Modificar contraseña">
-			<input class="loRe" type="password" name="contrao" id="contrao" placeholder="Repetir contraseña">
+			<!-- <input class="loRe" type="password" name="contraMO" id="contraMO" placeholder="Repetir contraseña"> -->
 			<div style="text-align: center">
 			<input class="loRe" type="button" value="Cambiar" id="cambiar">
 			</div>

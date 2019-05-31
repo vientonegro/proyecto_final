@@ -13,12 +13,12 @@ $(document).ready(function()
 			$("#emailM").removeClass("error-validation");
 		}
 
-    if($("#emailMo").val() != ($("#emailM").val())){
-      msg += "El campo email No coincide <br>";
-      $("#emailMo").addClass("error-validation");
-    } else {
-      $("#emailMo").removeClass("error-validation");
-    }
+    // if($("#emailMo").val() != ($("#emailM").val())){
+    //   msg += "El campo email No coincide <br>";
+    //   $("#emailMo").addClass("error-validation");
+    // } else {
+    //   $("#emailMo").removeClass("error-validation");
+    // }
 
 
 		if($("#contraM").val() == ""){
@@ -29,12 +29,12 @@ $(document).ready(function()
 		}
 
 
-      if($("#contrao").val() != ($("#contraM").val())){
-      msg += "El campo contraseña NO coincide <br>";
-      $("#contrao").addClass("error-validation");
-    } else {
-      $("#contrao").removeClass("error-validation");
-    }
+    //   if($("#contraMO").val() != ($("#contraM").val())){
+    //   msg += "El campo contraseña NO coincide <br>";
+    //   $("#contraMO").addClass("error-validation");
+    // } else {
+    //   $("#contraMO").removeClass("error-validation");
+    // }
 
   		$("#errorsM").html(msg);
 
